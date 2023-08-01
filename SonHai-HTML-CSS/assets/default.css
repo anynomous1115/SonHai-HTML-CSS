@@ -1,0 +1,20 @@
+::selection {
+  background-color: #f5524f; }
+
+::-moz-selection {
+  background-color: #f5524f; }
+
+.idz-top-section, .idz-tag-cloud a:hover, #scrollUp{background-color: #f5524f;}
+#scrollUp:hover{background: #f06664;}
+a, .colortext, .categaries-post li span, .popular-post span{color:#f5524f;}
+
+a:hover, .idz-entry-title a:hover{color: #f06664;}
+.button, button, input[type="submit"], .idz-button{background:#f5524f;}
+.button:hover, button:hover, input[type="submit"]:hover, .idz-button:hover{background:#f06664;}
+
+
+
+
+
+
+
