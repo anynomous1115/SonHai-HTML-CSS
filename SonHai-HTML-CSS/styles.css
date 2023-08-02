@@ -150,16 +150,19 @@
     width: 50%;
     height: 100%;
 }
-.setting-fixed{
+
+.setting-fixed {
     position: fixed;
     top: 35px;
     width: 30px;
     height: 30px;
     background-color: #ffffff;
 }
-.setting-fixed i{
+
+.setting-fixed i {
     padding: 7px 0 0 7px;
 }
+
 .contentBanner-2 .contentBanner-2-img {
     position: relative;
     display: block;
@@ -473,8 +476,7 @@
     color: #ec5954;
 }
 
-.popular {
-}
+.popular {}
 
 .popular h3 {
     text-align: center;
@@ -533,8 +535,9 @@
         color: rgba(93, 93, 93, 0.5);
         font-size: 0.6em;
     }
+
     .span-child:hover {
-        background-color: rgb(236, 89, 84,0.7);
+        background-color: rgb(236, 89, 84, 0.7);
     }
 }
 
@@ -546,9 +549,11 @@
 .entries .older {
     display: flex;
 }
-.older-a{
+
+.older-a {
     padding-top: 9px;
 }
+
 .older-a a {
     display: block;
     padding: 8px 10px 8px 56px;
@@ -567,9 +572,11 @@
 .entries .newer {
     display: flex;
 }
-.newer-a{
+
+.newer-a {
     padding-top: 9px;
 }
+
 .newer-a a {
     display: block;
     padding: 8px 10px 8px 56px;
@@ -583,6 +590,20 @@
 .newer-p span {
     font-size: 0.4em;
     color: rgb(161 161 161)
+}
+
+.comeBack {
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+}
+
+.comeBack i {
+    padding: 19px;
+    border-radius: 50%;
+    font-size: 0.8em;
+    background-color: rgba(245, 8, 8, 0.3);
+    border: none
 }
 
 /* Footer */
@@ -601,9 +622,11 @@
     justify-content: center;
 
 }
-.mediaIconFooter{
+
+.mediaIconFooter {
     padding-bottom: 50px;
 }
+
 .logoFooter .backgroundLogo {
     position: relative;
 }
@@ -616,11 +639,13 @@
     z-index: 30;
     font-size: 3.75em;
 }
-.mediaIconFooter ul{
+
+.mediaIconFooter ul {
     display: flex;
     padding-left: 36px;
 }
-.mediaIconFooter ul li{
+
+.mediaIconFooter ul li {
     list-style: none;
     padding-right: 43px;
 }
