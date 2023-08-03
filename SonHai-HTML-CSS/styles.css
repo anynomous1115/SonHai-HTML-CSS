@@ -60,7 +60,7 @@
 .logo span {
     padding-left: 0.1em;
     padding-right: 0.3em;
-    font-size: 3.75em;
+    font-size: 4em;
     color: #ffffff;
 }
 
@@ -72,10 +72,10 @@
 /* Banner */
 
 .banner {
-    padding: 0 16.7%;
-    color: #ffffff;
+    padding: 0 15%;
+    color: rgb(255, 255, 255, 0.8);
     display: flex;
-    height: 60vh;
+    height: 70vh;
 }
 
 .banner .contentBanner-1 {
@@ -110,17 +110,18 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.44);
     z-index: 3;
-    padding: 10%;
+    padding: 12%;
 }
 
 .contentBanner-1 .contentBanner-1-hover>hr {
     margin-bottom: 1em;
     width: 80px;
-    border-color: rgb(255, 255, 255);
-    border: rgb(255, 255, 255) solid 0.5px;
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
-.contentBanner-1 .contentBanner-1-hover>h3 {
+.contentBanner-1 .contentBanner-1-hover>h1 {
     line-height: 1.7em;
 }
 
@@ -133,10 +134,11 @@
 .banner .btnBanner {
     background-color: rgba(0, 0, 0, 0);
     font-family: 'Merriweather', serif;
-    color: #ffffff;
-    border: #ffffff solid 1px;
-    padding: 0.72em 1.8em;
+    color: rgba(255, 255, 255, 0.8);
+    border: rgb(255, 255, 255, 0.8) solid 1px;
+    padding: 16px 48px;
     margin-top: 1em;
+    font-size: 0.6em;
 }
 
 .contentBanner-2 {
@@ -153,14 +155,15 @@
 
 .setting-fixed {
     position: fixed;
-    top: 35px;
-    width: 30px;
-    height: 30px;
+    top: 45px;
+    width: 45px;
+    height: 45px;
     background-color: #ffffff;
 }
 
 .setting-fixed i {
-    padding: 7px 0 0 7px;
+    padding: 13px 0 0 12px;
+    font-size: 1.3em;
 }
 
 .contentBanner-2 .contentBanner-2-img {
@@ -183,17 +186,18 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.44);
-    padding: 10%;
+    padding: 12%;
 }
 
 .contentBanner-2 .contentBanner-2-hover>hr {
-    margin-bottom: 0.4em;
+    margin-bottom: 15px;
     width: 80px;
-    border-color: rgb(255, 255, 255);
-    border: rgb(255, 255, 255) solid 0.5px;
+    border: none;
+    height: 1px;
+    background: rgb(255, 255, 255);
 }
 
-.contentBanner-2 .contentBanner-2-hover>h3 {
+.contentBanner-2 .contentBanner-2-hover>h1 {
     line-height: 1.3em;
 }
 
@@ -204,30 +208,31 @@
 }
 
 .contentBanner-2 .contentBanner-2-text {
-    background-color: #383838;
-    padding: 7.3%;
-    height: 100%;
+    background-color: rgb(39, 39, 39);
+    padding: 12%;
+    height: 50%;
     width: 100%;
 }
 
 .contentBanner-2-text hr {
-    margin-bottom: 0.7em;
+    margin-bottom: 15px;
     width: 80px;
-    border-color: rgb(255, 255, 255);
-    border: rgb(255, 255, 255) solid 0.5px;
+    border: none;
+    height: 1px;
+    background: rgb(255, 255, 255);
 }
 
-.contentBanner-2-text h3 {
+.contentBanner-2-text h1 {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
 
 .contentBanner-2-text .day {
-    padding: 10px 0;
+    padding: 10px 0 20px 0;
     font-size: 0.6em;
 }
 
@@ -235,23 +240,23 @@
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.3em;
+    line-height: 26px;
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    color: #5d5d5d;
-    font-size: 0.7em;
+    color: rgb(102 102 102);
+    font-size: 0.9em;
 }
 
 /* Content */
 
 .content {
     display: flex;
-    padding: 0px 20% 0 20%;
+    padding: 0 18%;
 }
 
 .content .mainContent {
-    width: 60%;
+    width: 70%;
 }
 
 .mainContent img {
@@ -267,43 +272,44 @@
 }
 
 .mainContent-1 i {
-    padding: 40px 0 10px 40px;
+    padding: 40px 0 10px 80px;
 }
 
 .mainContent-1>hr {
-    width: 50px;
-    margin-left: 40px;
-    border-color: rgb(214, 214, 214);
-    border: rgb(214, 214, 214) solid 0.5px;
+    width: 70px;
+    margin-left: 80px;
+    border: none;
+    height: 1px;
+    background: rgb(214, 214, 214);
 }
 
-.mainContent-1 h3 {
-    padding: 20px 40px;
+.mainContent-1 h1 {
+    padding: 20px 80px;
 
 }
 
 .mainContent-1 p {
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.3em;
-    -webkit-line-clamp: 6;
+    line-height: 1.7em;
+    -webkit-line-clamp: 4;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     color: #5d5d5d;
-    font-size: 0.7em;
-    padding: 20px 40px 0px 40px;
+    font-size: 1em;
+    padding: 20px 80px 0px 80px;
 }
 
 .mainContent-1 .note {
     display: flex;
-    margin-left: 40px;
+    margin-left: 80px;
     font-size: 0.6em;
 
 }
 
 .mainContent-1 .magnify {
     text-align: center;
-    font-size: 3.2em;
+    font-size: 2.8em;
     line-height: 30px;
     color: #555555;
     float: left;
@@ -320,14 +326,14 @@
 
 .interact {
     display: flex;
-    padding-top: 30px;
+    padding-top: 45px;
     padding-bottom: 50px;
 }
 
 .interact-ul {
     position: relative;
     width: 100%;
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 .interact-ul ul {
@@ -340,8 +346,9 @@
     top: 55%;
     width: 100%;
     z-index: 0;
-    border-color: rgb(231, 231, 231);
-    border: rgb(231, 231, 231) solid 0.5px;
+    border: none;
+    height: 1px;
+    background: rgb(214, 214, 214);
 
 }
 
@@ -349,28 +356,37 @@
     /* position: absolute;
     z-index: 1; */
     list-style: none;
-    padding-right: 10px;
+    padding-right: 13px;
 }
 
 .interact li i {
     color: rgb(231, 231, 231);
     border: rgb(231, 231, 231) solid 1px;
-    padding: 7px;
+    padding: 11px 10px 9px 10px;
     border-radius: 50%;
-    font-size: 0.8em;
+    font-size: 1em;
     background-color: #ffffff;
 }
 
+#shareIcon {
+    padding: 11px 11px 9px 10px;
+}
+
+#eyeIcon {
+    padding: 10px 9px 9px 9px;
+
+}
+
 .interact-btn {
-    margin-right: 40px;
+    margin-right: 80px;
 }
 
 .interact-btn button {
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.7);
     background-color: #ec5954;
-    font-size: 0.4em;
-    width: 100px;
-    height: 20px;
+    font-size: 0.7em;
+    width: 179px;
+    height: 34px;
     border: none;
 
 }
@@ -379,25 +395,24 @@
     width: 100%;
     background-color: rgb(46 49 53);
     text-align: center;
-    padding: 40px;
+    padding: 50px 40px 66px 40px;
     margin-bottom: 30px;
 }
 
 .maiContent-famousQuote i {
-    font-size: 1em;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
 }
 
 .maiContent-famousQuote p {
-    color: #ffffff;
-    font-size: 0.7em;
-    line-height: 15px;
-
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2em;
+    line-height: 31px;
+    padding-bottom: 32px;
 }
 
 .maiContent-famousQuote span {
-    color: rgb(126 126 126);
-    font-size: 0.7em;
+    color: rgba(126, 126, 126, 0.8);
+    font-size: 1.1em;
 }
 
 .mainContent-URL {
@@ -405,31 +420,21 @@
     width: 100%;
     height: 20vh;
     background-image: url(./assets/featured3.jpg);
-    background-color: rgb(46 49 53);
-    text-align: center;
-    padding: 40px 50px;
+    background-repeat: none;
     object-fit: cover;
     margin-bottom: 30px;
-    filter: grayscale(20%);
-}
-
-.mainContent-URL .mainContent-URL-child {
-    width: 100%;
-    top: 24%;
-    left: 0;
-    position: absolute;
-    z-index: 2;
 }
 
 .mainContent-URL i {
-    font-size: 1.5 em;
-    padding-bottom: 10px;
+    font-size: 1.5em;
+    padding-bottom: 22px;
 }
 
+/* ở đây */
 .mainContent-URL p {
-    align-items: center;
-    color: #ffffff;
-    font-size: 1.1em;
+    /* align-items: center; */
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4em;
 }
 
 .mainContent-URL .mainContent-URL-coating {
@@ -439,18 +444,37 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0 0 0 / 40%);
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.mainContent-URL-coating .mainContent-URL-coating-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.URL-p {
+    text-align: center;
+    width: 50%;
 }
 
 .mainContent-1 .text-between {
     color: rgb(161 161 161);
-    font-size: 1em;
+    font-size: 1.3em;
     text-align: center;
+    padding-top: 0;
+}
+
+.text-end {
+    padding-top: 0;
+
 }
 
 .content .mainContent-2 {
-    width: 40%;
-    padding-left: 40px;
+    width: 35%;
+    padding-left: 34px;
     color: #555555;
 
 }
@@ -462,7 +486,7 @@
 }
 
 .categoriesList ul {
-    padding-top: 40px;
+    padding: 40px 0px 0 8px;
 }
 
 .categoriesList ul li {
@@ -480,6 +504,7 @@
 
 .popular h3 {
     text-align: center;
+    margin-bottom: 34px;
 }
 
 .popular .popularChild-1 {
@@ -487,12 +512,13 @@
 }
 
 .popularChild-1 .popularChild-1-text {
-    padding-left: 16px;
+    padding-left: 26px;
 }
 
 .popularChild-1 .popularChild-1-text h5 {
-    line-height: 20px;
-    padding-bottom: 20px;
+    line-height: 32px;
+    padding-bottom: 15px;
+    color: rgba(65, 65, 65, 0.8);
 }
 
 .popularChild-1 .popularChild-1-text p {
@@ -501,10 +527,11 @@
 }
 
 .popular hr {
-    width: 100%;
+    width: 90%;
     margin: 20px 0;
-    border-color: rgb(212, 212, 212);
-    border: rgb(212, 212, 212) solid 0.5px;
+    border: none;
+    height: 1px;
+    background: rgb(214, 214, 214);
 }
 
 .tags {
@@ -599,9 +626,9 @@
 }
 
 .comeBack i {
-    padding: 19px;
+    padding: 25px;
     border-radius: 50%;
-    font-size: 0.8em;
+    font-size: 0.98em;
     background-color: rgba(245, 8, 8, 0.3);
     border: none
 }
@@ -611,7 +638,8 @@
 .footer {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 51px;
+    padding-bottom: 50px;
     background-color: #272727;
 }
 
@@ -648,4 +676,10 @@
 .mediaIconFooter ul li {
     list-style: none;
     padding-right: 43px;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
 }
