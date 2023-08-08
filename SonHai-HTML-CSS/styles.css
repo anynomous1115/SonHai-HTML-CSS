@@ -16,20 +16,29 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 40px 16.7% 40px 16.7%;
+    padding: 60px 16.7% 60px 16.7%;
 }
 
-.header li {
+.header .mediaIcon li {
     list-style: none;
-    margin-left: 1em;
+    margin-left: 20px;
 }
 
 .mediaIcon {
     padding-left: 3.2em;
 }
 
+.mediaIcon i {
+    color: #3b3b3b;
+    font-size: 1.3em;
+}
+
 .slideBar {
     padding-right: 3.2em;
+}
+
+.slideBar i {
+    color: #ffffff;
 }
 
 .slideBar,
@@ -41,8 +50,7 @@
 .slideBar ul,
 .mediaIcon ul {
     display: flex;
-    /* flex-direction: center;
-    align-items: center; */
+    padding-top: 9px;
 }
 
 .logo {
@@ -66,14 +74,19 @@
 
 .slideBar>ul>li {
     background-color: #272727;
-    padding: 0.4375em 0.625em;
+    padding: 8px 16px;
+    list-style: none;
+    margin-left: 5px;
+}
+.slideBar i{
+    font-size: 0.8em;
 }
 
 /* Banner */
 
 .banner {
     padding: 0 15%;
-    color: rgb(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
     display: flex;
     height: 70vh;
 }
@@ -102,7 +115,7 @@
 
 }
 
-.contentBanner-1 .contentBanner-1-hover {
+.contentBanner-1-hover {
     position: absolute;
     top: 0;
     left: 0;
@@ -113,7 +126,7 @@
     padding: 12%;
 }
 
-.contentBanner-1 .contentBanner-1-hover>hr {
+.contentBanner-1-hover>hr {
     margin-bottom: 1em;
     width: 80px;
     border: none;
@@ -121,12 +134,12 @@
     background: rgba(255, 255, 255, 0.8);
 }
 
-.contentBanner-1 .contentBanner-1-hover>h1 {
+.contentBanner-1-hover>h1 {
     line-height: 1.7em;
 }
 
-.contentBanner-1 .contentBanner-1-hover>.day {
-    padding: 10px 0;
+.contentBanner-1-hover>.day {
+    padding: 5px 0 20px 0;
     font-size: 0.6em;
 
 }
@@ -164,6 +177,7 @@
 .setting-fixed i {
     padding: 13px 0 0 12px;
     font-size: 1.3em;
+    color: #ec5954;
 }
 
 .contentBanner-2 .contentBanner-2-img {
@@ -180,33 +194,6 @@
     object-fit: cover;
 }
 
-.contentBanner-2 .contentBanner-2-img>.contentBanner-2-hover {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.44);
-    padding: 12%;
-}
-
-.contentBanner-2 .contentBanner-2-hover>hr {
-    margin-bottom: 15px;
-    width: 80px;
-    border: none;
-    height: 1px;
-    background: rgb(255, 255, 255);
-}
-
-.contentBanner-2 .contentBanner-2-hover>h1 {
-    line-height: 1.3em;
-}
-
-.contentBanner-2 .contentBanner-2-hover>.day {
-    padding: 10px 0;
-    font-size: 0.6em;
-
-}
-
 .contentBanner-2 .contentBanner-2-text {
     background-color: rgb(39, 39, 39);
     padding: 12%;
@@ -219,7 +206,7 @@
     width: 80px;
     border: none;
     height: 1px;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .contentBanner-2-text h1 {
@@ -261,6 +248,7 @@
 
 .mainContent img {
     width: 100%;
+    padding-bottom: 50px;
 }
 
 .mainContent .mainContent-1 {
@@ -273,14 +261,17 @@
 
 .mainContent-1 i {
     padding: 40px 0 10px 80px;
+    font-size: 2.2em;
+    color: rgba(84, 84, 84, 0.3);
 }
 
 .mainContent-1>hr {
-    width: 70px;
+    width: 80px;
     margin-left: 80px;
+    margin-top: 10px;
     border: none;
     height: 1px;
-    background: rgb(214, 214, 214);
+    background: rgba(214, 214, 214, 0.7);
 }
 
 .mainContent-1 h1 {
@@ -297,7 +288,7 @@
     -webkit-box-orient: vertical;
     color: #5d5d5d;
     font-size: 1em;
-    padding: 20px 80px 0px 80px;
+    padding: 0px 80px 0px 80px;
 }
 
 .mainContent-1 .note {
@@ -316,12 +307,21 @@
     margin: 13px 12px 0 0;
     padding: 0;
 }
+.mainContent-1 iframe{
+    padding-bottom: 50px;
+}
+#below,
+#above {
+    width: 115px;
+    margin: 25px 41%;
+}
+
 
 .note span {
     margin-right: 1.3em;
-    margin-bottom: 3em;
+    margin-bottom: 40px;
     color: rgba(93, 93, 93, 0.5);
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .interact {
@@ -343,12 +343,12 @@
 
 .interact-ul>hr {
     position: absolute;
-    top: 55%;
+    top: 52%;
     width: 100%;
     z-index: 0;
     border: none;
     height: 1px;
-    background: rgb(214, 214, 214);
+    background: rgba(231, 231, 231, 0.7);
 
 }
 
@@ -386,7 +386,7 @@
     background-color: #ec5954;
     font-size: 0.7em;
     width: 179px;
-    height: 34px;
+    height: 40px;
     border: none;
 
 }
@@ -401,6 +401,8 @@
 
 .maiContent-famousQuote i {
     padding-bottom: 16px;
+    font-size: 2.2em;
+    color: rgba(130, 130, 130, 0.5);
 }
 
 .maiContent-famousQuote p {
@@ -420,14 +422,16 @@
     width: 100%;
     height: 20vh;
     background-image: url(./assets/featured3.jpg);
-    background-repeat: none;
-    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin-bottom: 30px;
 }
 
 .mainContent-URL i {
     font-size: 1.5em;
     padding-bottom: 22px;
+    color: rgb(130, 130, 130);
 }
 
 /* ở đây */
@@ -466,7 +470,6 @@
     text-align: center;
     padding-top: 0;
 }
-
 .text-end {
     padding-top: 0;
 
@@ -485,8 +488,25 @@
     padding-top: 14px;
 }
 
+.categories-hr hr {
+    margin-top: 48px;
+    width: 82px;
+    height: 1px;
+    margin-left: 39%;
+    border: none;
+    background: rgb(214, 214, 214);
+}
+
 .categoriesList ul {
     padding: 40px 0px 0 8px;
+
+}
+
+.categoriesList ul hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: rgb(214, 214, 214);
 }
 
 .categoriesList ul li {
@@ -500,11 +520,23 @@
     color: #ec5954;
 }
 
-.popular {}
+.categoriesList li i {
+    color: #555555;
+    padding-right: 15px;
+}
 
 .popular h3 {
     text-align: center;
     margin-bottom: 34px;
+}
+
+.popular .popular-hr hr {
+    margin-top: 48px;
+    width: 88px;
+    height: 1px;
+    margin-left: 38%;
+    border: none;
+    background: rgb(214, 214, 214);
 }
 
 .popular .popularChild-1 {
@@ -516,7 +548,7 @@
 }
 
 .popularChild-1 .popularChild-1-text h5 {
-    line-height: 32px;
+    line-height: 30px;
     padding-bottom: 15px;
     color: rgba(65, 65, 65, 0.8);
 }
@@ -544,6 +576,15 @@
     padding-top: 20px;
 }
 
+.tags-hr hr {
+    margin-top: 48px;
+    width: 80px;
+    height: 1px;
+    margin-left: 39%;
+    border: none;
+    background: rgb(214, 214, 214);
+}
+
 .tags-span {
     padding-top: 10px;
     display: flex;
@@ -552,7 +593,7 @@
     .span-child {
         color: #5d5d5d;
         margin: 20px 10px 0 0;
-        padding: 6px 10px;
+        padding: 4px 10px 7px 10px;
         background-color: #ffffff;
         vertical-align: baseline;
     }
@@ -587,13 +628,25 @@
     background-color: #272727;
 }
 
+.older-a a i {
+    color: #ffffff;
+    font-size: 0.6em;
+    padding-bottom: 5px;
+}
+
 .older-p {
     padding-left: 10px;
+    padding-top: 1px;
 }
 
 .older-p span {
-    font-size: 0.4em;
+    font-size: 0.6em;
     color: rgb(161 161 161)
+}
+
+.older-p p {
+    font-size: 1.2em;
+
 }
 
 .entries .newer {
@@ -610,13 +663,28 @@
     background-color: #272727;
 }
 
+.newer-a a i {
+    color: #ffffff;
+    font-size: 0.6em;
+    padding-bottom: 5px;
+
+
+}
+
 .newer-p {
     padding-right: 10px;
+    padding-top: 1px;
+
 }
 
 .newer-p span {
-    font-size: 0.4em;
+    font-size: 0.6em;
     color: rgb(161 161 161)
+}
+
+.newer-p p {
+    font-size: 1.2em;
+
 }
 
 .comeBack {
@@ -626,6 +694,7 @@
 }
 
 .comeBack i {
+    color: rgba(255, 255, 255, 0.5);
     padding: 25px;
     border-radius: 50%;
     font-size: 0.98em;
@@ -646,26 +715,36 @@
 .mediaIconFooter,
 .footer>.logoFooter {
     display: flex;
-    padding-top: 50px;
+    padding-top: 60px;
     justify-content: center;
 
 }
 
 .mediaIconFooter {
     padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.mediaIconFooter i {
+    color: rgba(161, 161, 161, 0.8);
 }
 
 .logoFooter .backgroundLogo {
     position: relative;
 }
 
+.backgroundLogo img {
+    width: 120px;
+    height: 104px;
+}
+
 .logoFooter span {
     position: absolute;
     color: #ebebeb;
-    left: 0;
-    top: 30px;
+    left: 8px;
+    top: 33px;
     z-index: 30;
-    font-size: 3.75em;
+    font-size: 2.6em;
 }
 
 .mediaIconFooter ul {
@@ -675,11 +754,13 @@
 
 .mediaIconFooter ul li {
     list-style: none;
-    padding-right: 43px;
+    padding-right: 30px;
 }
 
 .footer p {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    color: #666666;
+    font-size: 0.8em;
 }
