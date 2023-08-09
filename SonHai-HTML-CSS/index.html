@@ -5,354 +5,411 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./variables.css">
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./responsive.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="root">
         <div class="header">
-            <div class="mediaIcon">
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                    <li><a href="#"></a><i class="fa fa-rss"></i></li>
-                </ul>
-            </div>
-            <div class="logo">
-                <img src="./assets/image/image.png" alt="">
-                <p><span>Yuna</span> beauty lies within.</p>
-            </div>
-            <div class="slideBar">
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-bars" ></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-magnifying-glass" ></a></i></li>
-                </ul>
+            <div class="container">
+                <div class="header-items">
+                    <div class="mediaIcon">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li><a href="#"></a><i class="fa fa-rss"></i></li>
+                        </ul>
+                    </div>
+                    <div class="logo">
+                        <img src="./assets/image/image.png" alt="">
+                        <p><span>Yuna</span> beauty lies within.</p>
+                    </div>
+                    <div class="slideBar">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></a></i></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="banner">
-            <div class="contentBanner-1">
-                <div class="contentBanner-1-img">
-                    <img src="./assets/featured1.jpg" alt="">
-                    <div class="contentBanner-1-hover">
-                        <hr>
-                        <h1>Contrary to popular belief.</h1>
-                        <p class="day">Jul 8,2015</p>
-                        <button class="btnBanner">CONTINUE READING</button>
+            <div class="container">
+                <div class="banner-items">
+                    <div class="contentBanner-left">
+                        <div class="contentBanner-left-img">
+                            <img src="./assets/featured1.jpg" alt="">
+                            <div class="contentBanner-coating">
+                                <hr class="banner-hr">
+                                <h1>Contrary to popular belief.</h1>
+                                <p class="day">Jul 8,2015</p>
+                                <button class="btnBanner">CONTINUE READING</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contentBanner-right">
+                        <div class="contentBanner-right-img">
+                            <img src="./assets/featured2.jpg" alt="">
+                            <div class="contentBanner-coating">
+                                <hr class="banner-hr">
+                                <h1>Contrary to popular belief.</h1>
+                                <p class="day">Jul 8,2015</p>
+                                <button class="btnBanner">CONTINUE READING</button>
+                            </div>
+                        </div>
+                        <div class="contentBanner-right-text">
+                            <hr class="banner-hr">
+                            <h1>Lorem Ipsum is not simply random</h1>
+                            <p class="day">Jul 8,2015</p>
+                            <p class="text">
+                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                                interested.
+                                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="contentBanner-2">
-                <div class="contentBanner-2-img">
-                    <img src="./assets/featured2.jpg" alt="">
-                    <div class="contentBanner-1-hover">
-                        <hr>
-                        <h1>Contrary to popular belief.</h1>
-                        <p class="day">Jul 8,2015</p>
-                        <button class="btnBanner">CONTINUE READING</button>
-                    </div>
-                </div>
-                <div class="contentBanner-2-text">
-                    <hr>
-                    <h1>Lorem Ipsum is not simply random</h1>
-                    <p class="day">Jul 8,2015</p>
-                    <p class="text">
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                        Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        <div class="setting-fixed">
-            <i class="fa-solid fa-gear"></i>
         </div>
         <div class="content">
-            <div class="mainContent">
-                <div class="mainContent-1">
-                    <i class="fa fa-image "></i>
-                    <hr>
-                    <h1 class="">Breathing new life into vintage bikes</h1>
-                    <div class="note">
-                        <span>JUN 11, 2015</span>
-                        <span>0 COMMENTS</span>
-                        <span>BONITO EDUARDO</span>
-                    </div>
-                    <img src="./assets/post1.jpg" alt="">
-                    <p class=""> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do
-                        eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="interact">
-                        <div class="interact-ul">
+            <div class="container">
+                <div class="content-item">
+                    <div class="blog">
+                        <div class="blog-item">
+                            <i class="fa fa-image "></i>
                             <hr>
-                            <ul>
-                                <li><a href="#"><i class="fa-solid fa-share-nodes" id="shareIcon"></i></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i id="eyeIcon" class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-                            </ul>
+                            <h1 class="">Breathing new life into vintage bikes</h1>
+                            <div class="note">
+                                <span>JUN 11, 2015</span>
+                                <span>0 COMMENTS</span>
+                                <span>BONITO EDUARDO</span>
+                            </div>
+                            <img src="./assets/post1.jpg" alt="">
+                            <p class=""> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit,
+                                sed do
+                                eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris
+                                nisi
+                                ut
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit
+                                esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident,
+                                sunt
+                                in
+                                culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="interact">
+                                <div class="interact-ul">
+                                    <hr>
+                                    <ul>
+                                        <li><a href="#"><i class="fa-solid fa-share-nodes" id="shareIcon"></i></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i id="eyeIcon" class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                                <button class="interact-btn">CONTINUE READING</button>
+                            </div>
                         </div>
-                        <div class="interact-btn">
-                            <a href=""><button>CONTINUE READING</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainContent-1">
-                    <i class="fa-solid fa-film"></i>
-                    <hr>
-                    <h1 class="">Breathing new life into vintage bikes</h1>
-                    <div class="note">
-                        <span>JUN 11, 2015</span>
-                        <span>0 COMMENTS</span>
-                        <span>BONITO EDUARDO</span>
-                    </div>
-                    <img src="./assets/post2.jpg" alt="">
-                    <p class=""> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do
-                        eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="interact">
-                        <div class="interact-ul">
+                        <div class="blog-item">
+                            <i class="fa-solid fa-film"></i>
                             <hr>
-                            <ul>
-                                <li><a href="#" id=""><i class="fa-solid fa-share-nodes"></i></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-                            </ul>
+                            <h1 class="">Breathing new life into vintage bikes</h1>
+                            <div class="note">
+                                <span>JUN 11, 2015</span>
+                                <span>0 COMMENTS</span>
+                                <span>BONITO EDUARDO</span>
+                            </div>
+                            <img src="./assets/post2.jpg" alt="">
+                            <p class=""> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do
+                                eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris
+                                nisi
+                                ut
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit
+                                esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                sunt
+                                in
+                                culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="interact">
+                                <div class="interact-ul">
+                                    <hr>
+                                    <ul>
+                                        <li><a href="#"><i class="fa-solid fa-share-nodes" id="shareIcon"></i></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i id="eyeIcon" class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                                <button class="interact-btn">CONTINUE READING</button>
+                            </div>
                         </div>
-                        <div class="interact-btn">
-                            <a href=""><button>CONTINUE READING</button></a>
+                        <div class="blog-item-famousQuote">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                                a
+                                page
+                                when looking at its layout.</p>
+                            <span>- Cao Sơn Hải</span>
                         </div>
-                    </div>
-                </div>
-                <div class="maiContent-famousQuote">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout.</p>
-                    <span>- Cao Sơn Hải</span>
-                </div>
-                <div class="mainContent-1">
-                    <i class="fa-solid fa-music"></i>
-                    <hr>
-                    <h1 class="">Breathing new life into vintage bikes</h1>
-                    <div class="note">
-                        <span>JUN 11, 2015</span>
-                        <span>0 COMMENTS</span>
-                        <span>BONITO EDUARDO</span>
-                    </div>
-                    <iframe src="https://soundcloud.com/tramtero/thanh-pho-suong-tuan-ngoc-dalat-memoir-3-may-lang-thang" frameborder="0"></iframe>
-                    <!-- <img src="./assets/post3.jpg" alt=""> -->
-                    <p class=""> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do
-                        eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="interact">
-                        <div class="interact-ul">
+                        <div class="blog-item">
+                            <i class="fa-solid fa-music"></i>
                             <hr>
-                            <ul>
-                                <li><a href="#" id=""><i class="fa-solid fa-share-nodes"></i></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-                            </ul>
+                            <h1 class="">Breathing new life into vintage bikes</h1>
+                            <div class="note">
+                                <span>JUN 11, 2015</span>
+                                <span>0 COMMENTS</span>
+                                <span>BONITO EDUARDO</span>
+                            </div>
+                            <iframe
+                                src="https://soundcloud.com/tramtero/thanh-pho-suong-tuan-ngoc-dalat-memoir-3-may-lang-thang"
+                                frameborder="0"></iframe>
+                            <!-- <img src="./assets/post3.jpg" alt=""> -->
+                            <p class=""> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do
+                                eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris
+                                nisi
+                                ut
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit
+                                esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                sunt
+                                in
+                                culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="interact">
+                                <div class="interact-ul">
+                                    <hr>
+                                    <ul>
+                                        <li><a href="#"><i class="fa-solid fa-share-nodes" id="shareIcon"></i></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i id="eyeIcon" class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                                <button class="interact-btn">CONTINUE READING</button>
+                            </div>
                         </div>
-                        <div class="interact-btn">
-                            <a href=""><button>CONTINUE READING</button></a>
+                        <div class="blog-item-URL">
+                            <div class="blog-item-URL-coating">
+                                <div class="blog-item-URL-coating-child">
+                                    <div class="URL-p">
+                                        <i class="fa-solid fa-link"></i>
+                                        <p>https://www.facebook.com/</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <hr>
+                            <h1 class="">Breathing new life into vintage bikes</h1>
+                            <div class="note">
+                                <span>JUN 11, 2015</span>
+                                <span>0 COMMENTS</span>
+                                <span>BONITO EDUARDO</span>
+                            </div>
+                            <p class="text-above"> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur
+                                adipiscing elit,
+                                sed do
+                                eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris
+                                nisi
+                                ut
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit
+                                esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                sunt
+                                in
+                                culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <hr id="above">
+                            <p id="text-between">
+                                It is a long established fact that a reader will be distracted by the readable content
+                                of a
+                                page
+                                when looking at its layout.
+                            </p>
+                            <hr id="below">
+                            <p class="text-end">There are many variations of passages of Lorem Ipsum available, but the
+                                majority
+                                have suffered
+                                alteration in some form</p>
+                            <div class="interact">
+                                <div class="interact-ul">
+                                    <hr>
+                                    <ul>
+                                        <li><a href="#"><i class="fa-solid fa-share-nodes" id="shareIcon"></i></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i id="eyeIcon" class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                                <button class="interact-btn">CONTINUE READING</button>
+                            </div>
+                        </div>
+                        <div class="blog-item-entries">
+                            <div class="older">
+                                <div class="older-a">
+                                    <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                                </div>
+                                <div class="older-p">
+                                    <span>OLDER</span>
+                                    <p>Entries</p>
+                                </div>
+                            </div>
+                            <div class="newer">
+                                <div class="newer-p">
+                                    <span>NEWER</span>
+                                    <p>Entries</p>
+                                </div>
+                                <div class="newer-a">
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mainContent-URL">
-                    <div class="mainContent-URL-coating">
-                        <div class="mainContent-URL-coating-child">
-                            <div class="URL-p">
-                                <i class="fa-solid fa-link"></i>
-                                <p>https://www.facebook.com/</p>
+                    <div class="blog-list">
+                        <div class="blog-list-categories">
+                            <div class="categories-hr">
+                                <hr>
+                            </div>
+                            <h2>Categories</h2>
+                            <div class="categoriesList">
+                                <ul>
+                                    <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
+                                    <hr>
+                                    <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
+                                    <hr>
+                                    <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
+                                    <hr>
+                                    <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
+                                    <hr>
+                                    <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
+                                    <hr>
+                                    <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog-list-popular">
+                            <div class="popular-hr">
+                                <hr>
+                            </div>
+                            <h2>Popular</h2>
+                            <div class="popularChild">
+                                <div class="popularChild-img">
+                                    <img src="./assets/popular1.jpg" alt="">
+                                </div>
+                                <div class="popularChild-text">
+                                    <p class="popularChild-text-title">The standard Lorem Ipsum passage, used since the
+                                        1500s</p>
+                                    <p class="popularChild-text-comment">24 comment</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="popularChild">
+                                <div class="popularChild-img">
+                                    <img src="./assets/popular2.jpg" alt="">
+                                </div>
+                                <div class="popularChild-text">
+                                    <p class="popularChild-text-title">The standard Lorem Ipsum passage, used since the
+                                        1500s</p>
+                                    <p class="popularChild-text-comment">24 comment</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="popularChild">
+                                <div class="popularChild-img">
+                                    <img src="./assets/popular3.jpg" alt="">
+                                </div>
+                                <div class="popularChild-text">
+                                    <p class="popularChild-text-title">The standard Lorem Ipsum passage, used since the
+                                        1500s</p>
+                                    <p class="popularChild-text-comment">24 comment</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-list-tags">
+                            <div class="tags-hr">
+                                <hr>
+                            </div>
+                            <h2>Tags</h2>
+                            <div class="tags-span">
+                                <div class="span-child"><a href="">BIKES</a></div>
+                                <div class="span-child"><a href="">ENTERTAINMENT</a></div>
+                                <div class="span-child"><a href="">BIKES</a></div>
+                                <div class="span-child"><a href="">BIKES</a></div>
+                                <div class="span-child"><a href="">BIKES</a></div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="mainContent-1">
-                    <i class="fa-regular fa-file-lines"></i>
-                    <hr>
-                    <h1 class="">Breathing new life into vintage bikes</h1>
-                    <div class="note">
-                        <span>JUN 11, 2015</span>
-                        <span>0 COMMENTS</span>
-                        <span>BONITO EDUARDO</span>
-                    </div>
-                    <p class="text-above"> <span class="magnify">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do
-                        eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <hr id="above">
-                    <p class="text-between">
-                        It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout.
-                    </p>
-                    <hr id="below">
-                    <p class="text-end">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered
-                        alteration in some form</p>
-                    <div class="interact">
-                        <div class="interact-ul">
-                            <hr>
-                            <ul>
-                                <li><a href="#" id=""><i class="fa-solid fa-share-nodes"></i></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="interact-btn">
-                            <a href=""><button>CONTINUE READING</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="entries">
-                    <div class="older">
-                        <div class="older-a">
-                            <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
-                        </div>
-                        <div class="older-p">
-                            <span>OLDER</span>
-                            <p>Entries</p>
-                        </div>
-                    </div>
-                    <div class="newer">
-                        <div class="newer-p">
-                            <span>NEWER</span>
-                            <p>Entries</p>
-                        </div>
-                        <div class="newer-a">
-                            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="mainContent-2">
-                <div class="categories">
-                    <div class="categories-hr">
-                        <hr>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-item">
+                    <div class="logoFooter">
+                        <div class="backgroundLogo"><img src="./assets/image/image.png" alt="">
+                            <span>Yuna</span>
+                        </div>
+
                     </div>
-                    <h3>Categories</h3>
-                    <div class="categoriesList">
+                    <div class="mediaIconFooter">
                         <ul>
-                            <li><i class="fa-solid fa-chevron-right"
-                                    ></i>World News <span>(4)</span></li>
-                            <hr>
-                            <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
-                            <hr>
-                            <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
-                            <hr>
-                            <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
-                            <hr>
-                            <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
-                            <hr>
-                            <li><i class="fa-solid fa-chevron-right"></i>World News <span>(4)</span></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li><a href="#"></a><i class="fa fa-rss"></i></li>
                         </ul>
                     </div>
-                </div>
-                <div class="popular">
-                    <div class="popular-hr">
-                    <hr>
+                    <div class="infoDesigner">
+                        <p>@2015,All reserved.Designed by Indonez</p>
                     </div>
-                    <h3>Popular</h3>
-                    <div class="popularChild-1">
-                        <div class="popularChild-1-img">
-                            <img src="./assets/popular1.jpg" alt="">
-                        </div>
-                        <div class="popularChild-1-text">
-                            <h5>The standard Lorem Ipsum passage, used since the 1500s</h5>
-                            <p>24 comment</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="popularChild-1">
-                        <div class="popularChild-1-img">
-                            <img src="./assets/popular2.jpg" alt="">
-                        </div>
-                        <div class="popularChild-1-text">
-                            <h5>The standard Lorem Ipsum passage, used since the 1500s</h5>
-                            <p>24 comment</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="popularChild-1">
-                        <div class="popularChild-1-img">
-                            <img src="./assets/popular3.jpg" alt="">
-                        </div>
-                        <div class="popularChild-1-text">
-                            <h5>The standard Lorem Ipsum passage, used since the 1500s</h5>
-                            <p>24 comment</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tags">
-                    <div class="tags-hr">
-                    <hr>
-                    </div>
-                    <h3>Tags</h3>
-                    <div class="tags-span">
-                        <div class="span-child"><a href="">BIKES</a></div>
-                        <div class="span-child"><a href="">ENTERTAINMENT</a></div>
-                        <div class="span-child"><a href="">BIKES</a></div>
-                        <div class="span-child"><a href="">BIKES</a></div>
-                        <div class="span-child"><a href="">BIKES</a></div>
-
-
-                    </div>
-                </div>
+                </div> 
             </div>
-
+        </div>
+        <div class="setting-fixed">
+            <i class="fa-solid fa-gear"></i>
         </div>
         <div class="comeBack">
             <a href="#"><i class="fa-solid fa-angle-up"></i></a>
-        </div>
-        <div class="footer">
-            <div class="logoFooter">
-                <div class="backgroundLogo"><img src="./assets/image/image.png" alt="">
-                    <span>Yuna</span>
-                </div>
-
-            </div>
-            <div class="mediaIconFooter">
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f" ></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                    <li><a href="#"></a><i class="fa fa-rss"></i></li>
-                </ul>
-            </div>
-            <div class="infoDesigned">
-                <p>@2015,All reserved.Designed by Indonez</p>
-            </div>
         </div>
     </div>
 </body>
 
 </html>
+<!--dùng container để bọc lại hết các element lớn
+    font-family và backgroud bỏ vào thẻ body
+    tìm hiểu và sử dụng max-width
+    tăng maxwidth lên-->
