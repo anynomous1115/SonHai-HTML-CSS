@@ -62,7 +62,7 @@ body {
     background-color: var(--black-90);
     padding: 0.8rem 1.6rem;
     list-style: none;
-    margin-left: 5px;
+    margin-left: 0.5rem;
 }
 
 .header .slideBar i {
@@ -193,7 +193,7 @@ body {
 }
 
 .content-item .blog-item-famousQuote i {
-    padding-bottom: 16px;
+    padding-bottom: 1.6rem;
     font-size: 2.2em;
     color: var(--black-60);
 }
@@ -210,10 +210,11 @@ body {
     font-size: 1.5rem;
 }
 
-.content-item #below,
-.content-item #above {
-    width: 115px;
-    margin: 25px 41%;
+.content-item #below-hr,
+.content-item #above-hr {
+    width: 11.5rem;
+    margin: 3rem 0;
+
 }
 
 .content-item .blog-item-URL {
@@ -266,6 +267,12 @@ body {
     font-size: 1.7rem;
     text-align: center;
     padding-top: 0;
+}
+
+.content-item .blog-item #below,
+.content-item .blog-item #above {
+    display: flex;
+    justify-content: center;
 }
 
 .content-item .blog-item .text-end {

@@ -16,6 +16,10 @@
         margin-left: 3rem;
     }
 
+    .header .mediaIcon #li-facebook {
+        margin-left: 0;
+    }
+
     .header .mediaIcon i {
         font-size: 1.5rem;
     }
@@ -26,7 +30,7 @@
 
     .header .logo {
         width: 13rem;
-        margin: 3rem 0rem 3rem 2rem;
+        margin: 3rem 0rem 3rem 0rem;
     }
 
     .header .logo img {
@@ -142,7 +146,12 @@
     .content-item .blog-item-URL {
         height: 20rem;
     }
-
+    .content-item #below-hr,
+    .content-item #above-hr {
+        width: 9.5rem;
+        margin: 2rem 0;
+    
+    }
     .blog .blog-item-entries .older-p,
     .blog .blog-item-entries .newer-p {
         display: none;
@@ -163,7 +172,112 @@
     .setting-fixed i {
         font-size: 1.5em;
     }
-    .comeBack{
+
+    .comeBack {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width:1024px) {
+
+    /* Header */
+    .header .header-items {
+        padding: 2rem 0;
+    }
+    .header .logo {
+        width: 18rem;
+        margin: 3rem 1rem 3rem 0rem;
+    }
+
+    /* Banner */
+    .banner .banner-items {
+        height: 30rem;
+    }
+
+    .banner .btnBanner {
+        display: none;
+    }
+
+    .banner .contentBanner-coating {
+        padding: 3rem 2rem;
+    }
+
+    .banner .banner-items .contentBanner-right .contentBanner-right-text {
+        padding: 3.5rem 2rem;
+    }
+
+    .banner .banner-items .contentBanner-right-text .text {
+        display: none;
+    }
+
+    /* content */
+    /* blog item */
+    .content-item {
+        display: block;
+        padding: 4rem 2rem;
+    }
+
+    .content-item .blog {
+        width: 100%;
+    }
+
+    .content-item .blog img {
+        padding: 0rem 0rem 3rem 0;
+    }
+
+    .content-item .blog .blog-item i {
+        padding: 5rem 0 1rem 6rem;
+        font-size: 3.5rem;
+    }
+
+    .content-item .blog .blog-item hr {
+        margin: 0 0 0 6rem;
+        width: 8rem;
+    }
+
+    .content-item .blog .blog-item h1 {
+        padding: 3rem 6rem;
+    }
+
+    .content-item .blog .blog-item .note {
+        font-size: 1rem;
+        width: 100%;
+        padding: 0 3rem 0 6rem;
+    }
+
+    .content-item .blog .blog-item .note span {
+        font-size: 1rem;
+    }
+
+    .content-item .blog .blog-item .interact .interact-ul {
+        margin-left: 6rem;
+    }
+    .content-item .blog-item-famousQuote {
+        padding: 6rem 3rem 6rem 3rem;
+    }
+
+    .content-item .blog-item-URL {
+        height: 20rem;
+    }
+
+
+    .content-item .blog-list {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* setting-fixed */
+    .setting-fixed {
+        top: 4rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .setting-fixed i {
+        font-size: 1.5em;
+    }
+
+    .comeBack {
         display: none;
     }
 }
