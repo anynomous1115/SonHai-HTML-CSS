@@ -114,11 +114,11 @@ body {
     }
 }
 
-.header .header-navbar ul {
+.header .header-right .header-navbar ul {
     display: flex;
 }
 
-.header .header-navbar ul li {
+.header .header-right .header-navbar ul li {
     list-style: none;
     padding-right: 2.5rem;
 }
@@ -129,7 +129,7 @@ body {
     }
 }
 
-.header .header-navbar ul li a {
+.header .header-right .header-navbar ul li a {
     display: block;
     text-decoration: none;
     color: var(--black-90);
@@ -147,7 +147,7 @@ body {
     }
 }
 
-.header .header-navbar a:hover {
+.header .header-right .header-navbar a:hover {
     color: var(--green-50);
     transition: 0.5s;
 }
@@ -164,7 +164,7 @@ body {
 
 }
 
-.header .header-buy a:hover {
+.header .header-right .header-buy a:hover {
     background-color: var(--black-90);
     transition: 0.5s;
 }
@@ -246,7 +246,7 @@ body {
     }
 }
 
-.main-content .content-item .banner-backgroud {
+.main-content .banner .banner-backgroud {
     width: 100%;
     height: 100%;
     background-image: url(../assets/img/bg_slider.png);
@@ -256,7 +256,7 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .content-item .banner-backgroud {
+    .main-content .banner .banner-backgroud {
         background-image: none;
     }
 
@@ -289,7 +289,7 @@ body {
     }
 }
 
-.main-content .banner .content-banner h1 {
+.banner .content-banner h1 {
     position: relative;
     font-size: 6.7rem;
     line-height: 8rem;
@@ -297,38 +297,38 @@ body {
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .content-banner h1 {
+    .banner .content-banner h1 {
         font-size: 5.7rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner .content-banner h1 {
+    .banner .content-banner h1 {
         font-size: 5rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner .content-banner h1 {
+    .banner .content-banner h1 {
         font-size: 4.4rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .content-banner h1 {
+    .banner .content-banner h1 {
         line-height: 4rem;
         font-size: 3.4rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .content-banner h1 {
+    .banner .content-banner h1 {
         line-height: 4rem;
         font-size: 2.4rem;
     }
 }
 
-.main-content .banner .content-banner .title-span {
+.banner .content-banner .title-span {
     color: var(--green-50);
     font-size: 6.2rem;
     line-height: 8rem;
@@ -341,31 +341,31 @@ body {
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .content-banner .title-span {
+    .banner .content-banner .title-span {
         font-size: 5.7rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner .content-banner .title-span {
+    .banner .content-banner .title-span {
         font-size: 5rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner .content-banner .title-span {
+    .banner .content-banner .title-span {
         font-size: 4.4rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .content-banner .title-span {
+    .banner .content-banner .title-span {
         font-size: 3.4rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .content-banner .title-span {
+    .banner .content-banner .title-span {
         font-size: 2.4rem;
         padding: 1rem 2rem;
         line-height: 5rem;
@@ -375,7 +375,7 @@ body {
 
 /* tìm hiểu về before và after */
 
-.main-content .banner .content-banner p {
+.banner .content-banner p {
     padding-top: 3rem;
     font-size: 2.3rem;
     color: var(--black-70);
@@ -383,39 +383,39 @@ body {
 
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .content-banner p {
+    .banner .content-banner p {
         font-size: 2rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner .content-banner p {
+    .banner .content-banner p {
         font-size: 1.7rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner .content-banner p {
+    .banner .content-banner p {
         padding-top: 2rem;
         font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .content-banner p {
+    .banner .content-banner p {
         padding-top: 1rem;
         font-size: 1.3rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .content-banner p {
+    .banner .content-banner p {
         padding-top: 1rem;
         font-size: 1rem;
     }
 }
 
-.main-content .banner .featured {
+.banner .featured {
     padding: 6rem 0 0 0;
     display: flex;
     flex-wrap: wrap;
@@ -423,39 +423,39 @@ body {
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .featured {
+    .banner .featured {
         padding-top: 2rem 0 0 0;
         gap: 2rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner .featured {
+    .banner .featured {
         padding-top: 1rem;
         gap: 3rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .featured {
+    .banner .featured {
         padding-top: 1rem;
         gap: 2rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .featured {
+    .banner .featured {
         padding-top: 1rem;
         gap: 1rem;
     }
 }
 
-.main-content .banner .featured-item {
+.banner .featured-item {
     display: flex;
     align-items: center;
 }
 
-.main-content .banner .featured-item p {
+.banner .featured-item p {
     padding-top: 0;
     font-size: 5.5rem;
     color: var(--green-50);
@@ -464,36 +464,36 @@ body {
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .featured-item p {
+    .banner .featured-item p {
         font-size: 4rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner .featured-item p {
+    .banner .featured-item p {
         font-size: 3.7rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner .featured-item p {
+    .banner .featured-item p {
         font-size: 3.3rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .featured-item p {
+    .banner .featured-item p {
         font-size: 2.3rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .featured-item p {
+    .banner .featured-item p {
         font-size: 2rem;
     }
 }
 
-.main-content .banner .featured-item span {
+.banner .featured-item span {
     padding-left: 1rem;
     font-size: 2rem;
     font-weight: 600;
@@ -501,66 +501,66 @@ body {
 
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .featured-item span {
+    .banner .featured-item span {
         font-size: 2rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner .featured-item span {
+    .banner .featured-item span {
         font-size: 1.7rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner .featured-item span {
+    .banner .featured-item span {
         font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .featured-item span {
+    .banner .featured-item span {
         font-size: 1.2rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .featured-item span {
+    .banner .featured-item span {
         font-size: 1rem;
         padding-left: 0.6rem;
     }
 }
 
-.main-content .banner .banner-btn {
+.banner .banner-btn {
     display: flex;
     padding-top: 4.5rem;
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .banner-btn {
+    .banner .banner-btn {
         padding-top: 2.5rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner .banner-btn {
+    .banner .banner-btn {
         padding-top: 2.2rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner .banner-btn {
+    .banner .banner-btn {
         padding-top: 2rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .banner-btn {
+    .banner .banner-btn {
         padding-top: 1rem;
     }
 }
 
-.main-content .banner .banner-btn a {
+.banner .banner-btn a {
     text-decoration: none;
     border-radius: 0.5rem;
     display: flex;
@@ -573,74 +573,74 @@ body {
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .banner-btn a {
+    .banner .banner-btn a {
         padding: 1.4rem 3.6rem;
         font-size: 1.3rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner .banner-btn a {
+    .banner .banner-btn a {
         padding: 1.2rem 3.2rem;
         font-size: 1.3rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .banner-btn a {
+    .banner .banner-btn a {
         padding: 1rem 3rem;
         font-size: 1rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .banner-btn a {
+    .banner .banner-btn a {
         padding: 0.8rem 1rem;
         font-size: 1rem;
     }
 }
 
-.main-content .banner .banner-btn i {
+.banner .banner-btn i {
     padding-right: 1rem;
     font-size: 2rem;
 }
 
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner .banner-btn i {
+    .banner .banner-btn i {
         font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner .banner-btn i {
+    .banner .banner-btn i {
         font-size: 1.2rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner .banner-btn i {
+    .banner .banner-btn i {
         font-size: 1rem;
     }
 }
 
-.main-content .banner .banner-btn .btn-live {
+.banner .banner-btn .btn-live {
     background-color: var(--green-50);
     color: var(--white);
 }
 
-.main-content .banner .banner-btn .btn-live:hover {
+.banner .banner-btn .btn-live:hover {
     background-color: var(--black-90);
     transition: 0.5;
 }
 
-.main-content .banner .banner-btn .btn-features {
+.banner .banner-btn .btn-features {
     border: var(--black-50-opacity-10) solid 0.1rem;
     background-color: var(--white);
     color: var(--black-70);
 }
 
-.main-content .banner .banner-btn .btn-features:hover {
+.banner .banner-btn .btn-features:hover {
     background-color: var(--green-50);
     color: var(--white);
 }
@@ -650,7 +650,7 @@ body {
     background-color: var(--white-5);
 }
 
-.main-content .content-item .benefits-child {
+.main-content .benefits .benefits-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -659,62 +659,64 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .content-item .benefits-child {
+    .main-content .benefits .benefits-child {
         padding: 4.6rem 0;
     }
 }
 
-.main-content .benefits .benefits-title {
+.benefits .benefits-title {
     width: 100%;
     text-align: center;
+    max-width: 60rem;
 }
 
-.main-content .benefits .benefits-text {
+.benefits .benefits-text {
     width: 100%;
     text-align: center;
     padding-top: 1.5rem;
+    max-width: 100rem;
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .benefits .benefits-text {
+    .benefits .benefits-text {
         padding-top: 1rem;
     }
 }
 
-.main-content .benefits .benefits-img {
-    width: 80%;
+.benefits .benefits-img {
+    max-width: 120rem;
     display: flex;
     margin: -4rem 0;
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .benefits .benefits-img {
+    .benefits .benefits-img {
         margin: -2rem 0;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .benefits .benefits-img {
+    .benefits .benefits-img {
         margin: -1rem 0;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .benefits .benefits-img {
+    .benefits .benefits-img {
         margin: 0;
     }
 }
 
-.main-content .benefits .benefits-img img {
+.benefits .benefits-img img {
     width: 100%;
 
 }
 
-.main-content .benefits .benefits-list {
+.benefits .benefits-list {
     max-width: 80rem;
 }
 
-.main-content .benefits .benefits-list ul {
+.benefits .benefits-list ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -722,18 +724,18 @@ body {
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .benefits .benefits-list ul {
+    .benefits .benefits-list ul {
         gap: 2rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .benefits .benefits-list ul {
+    .benefits .benefits-list ul {
         gap: 1rem;
     }
 }
 
-.main-content .benefits .benefits-list li {
+.benefits .benefits-list li {
     display: flex;
     align-items: center;
     font-size: 1.6rem;
@@ -746,61 +748,61 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .benefits .benefits-list li {
+    .benefits .benefits-list li {
         font-size: 1.3rem;
         padding: 1rem 1.5rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .benefits .benefits-list li {
+    .benefits .benefits-list li {
         font-size: 1.2rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .benefits .benefits-list li {
+    .benefits .benefits-list li {
         font-size: 1.1rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .benefits .benefits-list li {
+    .benefits .benefits-list li {
         font-size: 1rem;
         padding: 0.9rem 1.1rem;
     }
 }
 
-.main-content .benefits .benefits-list i {
+.benefits .benefits-list i {
     font-size: 2.5rem;
     padding-right: 2rem;
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .benefits .benefits-list i {
+    .benefits .benefits-list i {
         font-size: 2rem;
         padding-right: 1rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .benefits .benefits-list i {
+    .benefits .benefits-list i {
         font-size: 1.8rem;
         padding-right: 1rem;
     }
 }
 
-.main-content .benefits .benefits-list .green {
+.benefits .benefits-list .green {
     color: var(--green-40);
 }
 
-.main-content .benefits .benefits-list .red {
+.benefits .benefits-list .red {
     color: var(--red-60);
 }
 
 /* special */
 
-.main-content .content-item .special-child {
+.main-content .special .special-child {
     display: flex;
     padding: 7rem 2rem;
     justify-content: center;
@@ -809,77 +811,77 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .content-item .special-child {
+    .main-content .special .special-child {
         padding: 5rem 0;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .content-item .special-child {
+    .main-content .special .special-child {
         display: block;
     }
 }
 
-.main-content .special .special-img {
+.special .special-img {
     width: 50%;
     padding: 0 2rem;
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .special .special-img {
+    .special .special-img {
         padding: 0 1rem;
         width: 50%;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .special .special-img {
+    .special .special-img {
         padding: 0 1rem;
         width: 100%;
     }
 }
 
-.main-content .special .special-img img {
+.special .special-img img {
     width: 100%;
 }
 
-.main-content .special .special-content {
+.special .special-content {
     padding: 0 2rem;
     width: 50%;
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .special .special-content {
+    .special .special-content {
         padding: 0 1rem;
         width: 50%;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .special .special-content {
+    .special .special-content {
         padding: 0 2rem;
         width: 100%;
     }
 
 }
 
-.main-content .special .special-content .special-content-child {
-    margin-right: 26rem;
+.special .special-content .special-content-child {
+    margin-right: 22rem;
 }
 
 @media only screen and (max-width:1601px) {
-    .main-content .special .special-content .special-content-child {
+    .special .special-content .special-content-child {
         margin-right: 7rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .special .special-content .special-content-child {
+    .special .special-content .special-content-child {
         margin-right: 0;
     }
 }
 
-.main-content .special-content .subtitle {
+.special .special-content .subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -893,7 +895,7 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .special-content .subtitle {
+    .special .special-content .subtitle {
         width: 14rem;
         height: 3rem;
         font-size: 1rem;
@@ -901,7 +903,7 @@ body {
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .special-content .subtitle {
+    .special .special-content .subtitle {
         width: 14rem;
         height: 3rem;
         font-size: 0.9rem;
@@ -909,49 +911,49 @@ body {
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .special-content .subtitle {
+    .special .special-content .subtitle {
         width: 10rem;
         height: 2rem;
         font-size: 0.9rem;
     }
 }
 
-.main-content .special-content .subtitle i {
+.special .special-content .subtitle i {
     padding-left: 1rem;
     color: var(--white);
 }
 
-.main-content .special-content h1 {
+.special .special-content h1 {
     padding-top: 2rem;
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .special-content h1 {
+    .special .special-content h1 {
         padding-top: 1rem;
     }
 }
 
-.main-content .special-content {
+.special .special-content {
     padding-top: 3rem;
 }
 
-.main-content .special-content .special-btn {
+.special .special-content .special-btn {
     padding-top: 5rem;
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .special-content .special-btn {
+    .special .special-content .special-btn {
         padding-top: 2rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .special-content .special-btn {
+    .special .special-content .special-btn {
         text-align: center;
     }
 }
 
-.main-content .special-content a {
+.special .special-content a {
     text-decoration: none;
     padding: 1.5rem 3.3rem;
     font-size: 1.6rem;
@@ -963,27 +965,27 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .special-content a {
+    .special .special-content a {
         padding: 1.2rem 3rem;
         font-size: 1.4rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .special-content a {
+    .special .special-content a {
         padding: 1rem 2.8rem;
         font-size: 1.2rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .special-content a {
+    .special .special-content a {
         padding: 0.8rem 1.8rem;
         font-size: 1rem;
     }
 }
 
-.main-content .special-content a:hover {
+.special .special-content a:hover {
     color: var(--white);
     background-color: var(--green-50);
 }
@@ -1010,18 +1012,20 @@ body {
     }
 }
 
-.main-content .advanced-filter .advanced-filter-title {
+.advanced-filter .advanced-filter-title {
     width: 100%;
     text-align: center;
+    max-width: 80rem;
 }
 
-.main-content .advanced-filter .advanced-filter-text {
+.advanced-filter .advanced-filter-text {
     width: 100%;
     text-align: center;
+    max-width: 95rem;
+
 }
 
-.main-content .advanced-filter .advanced-filter-grid {
-    width: 100%;
+.advanced-filter .advanced-filter-grid {
     padding-top: 4em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1030,14 +1034,14 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .advanced-filter .advanced-filter-grid {
+    .advanced-filter .advanced-filter-grid {
         column-gap: 2em;
         row-gap: 2em;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .advanced-filter .advanced-filter-grid {
+    .advanced-filter .advanced-filter-grid {
         padding-top: 3em;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1047,7 +1051,7 @@ body {
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .advanced-filter .advanced-filter-grid {
+    .advanced-filter .advanced-filter-grid {
         padding-top: 3em;
         display: flex;
         flex-direction: column;
@@ -1075,12 +1079,11 @@ body {
     }
 }
 
-.main-content .hover-cart .hover-cart-title {
+.hover-cart .hover-cart-title {
     text-align: center;
 }
 
-.main-content .hover-cart .hover-cart-grid {
-    width: 100%;
+.hover-cart .hover-cart-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5em;
@@ -1089,7 +1092,7 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .hover-cart .hover-cart-grid {
+    .hover-cart .hover-cart-grid {
         column-gap: 2em;
         row-gap: 2em;
 
@@ -1097,7 +1100,7 @@ body {
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .hover-cart .hover-cart-grid {
+    .hover-cart .hover-cart-grid {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5em;
         row-gap: 3em;
@@ -1105,7 +1108,7 @@ body {
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .hover-cart .hover-cart-grid {
+    .hover-cart .hover-cart-grid {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1146,60 +1149,62 @@ body {
     }
 }
 
-.main-content .homepages .homepages-child span {
+.homepages .homepages-child span {
     color: var(--green-50);
     font-size: 8rem;
     font-weight: 600;
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .homepages .homepages-child span {
+    .homepages .homepages-child span {
         font-size: 6rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .homepages .homepages-child span {
+    .homepages .homepages-child span {
         font-size: 4.8rem;
     }
 }
+
 @media only screen and (max-width:1025px) {
-    .main-content .homepages .homepages-child span {
+    .homepages .homepages-child span {
         font-size: 3.8rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .homepages .homepages-child span {
+    .homepages .homepages-child span {
         font-size: 2.8rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .homepages .homepages-child span {
+    .homepages .homepages-child span {
         font-size: 2rem;
     }
 }
-.main-content .homepages .homepages-child .homepage-title {
+
+.homepages .homepages-child .homepage-title {
     text-align: center;
 }
 
-.main-content .homepages .homepages-child h1 {
+.homepages .homepages-child h1 {
     padding: 2rem 0;
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .homepages .homepages-child h1 {
+    .homepages .homepages-child h1 {
         padding: 1rem 0;
     }
 }
 
-.main-content .homepages .homepages-child p {
+.homepages .homepages-child p {
     text-align: center;
+    max-width: 100rem;
 }
 
-.main-content .homepages .homepages-demo {
-    width: 100%;
+.homepages .homepages-demo {
     padding-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1208,7 +1213,7 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .homepages .homepages-demo {
+    .homepages .homepages-demo {
         padding-top: 3rem;
         column-gap: 2em;
         row-gap: 2em;
@@ -1216,7 +1221,7 @@ body {
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .homepages .homepages-demo {
+    .homepages .homepages-demo {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5em;
         row-gap: 3em;
@@ -1224,7 +1229,7 @@ body {
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .homepages .homepages-demo {
+    .homepages .homepages-demo {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1252,12 +1257,12 @@ body {
     }
 }
 
-.main-content .mobile-child .mobile-title {
+.mobile .mobile-child .mobile-title {
     text-align: center;
+    max-width: 50rem;
 }
 
-.main-content .mobile-child .mobile-demo {
-    width: 100%;
+.mobile .mobile-child .mobile-demo {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 5em;
@@ -1266,7 +1271,7 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .mobile-child .mobile-demo {
+    .mobile .mobile-child .mobile-demo {
         column-gap: 2em;
         row-gap: 2em;
         padding-top: 6rem;
@@ -1274,7 +1279,7 @@ body {
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .mobile-child .mobile-demo {
+    .mobile .mobile-child .mobile-demo {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5em;
         row-gap: 3em;
@@ -1282,14 +1287,12 @@ body {
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .mobile-child .mobile-demo {
+    .mobile .mobile-child .mobile-demo {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
-
-@media only screen and (max-width:481px) {}
 
 /* banner-promotion */
 .main-content .banner-promotion {
@@ -1298,7 +1301,7 @@ body {
 }
 
 .main-content .banner-promotion .banner-promotion-child {
-    padding: 8rem 29rem;
+    padding: 8rem 24rem;
     display: flex;
     align-items: center;
 }
@@ -1322,65 +1325,65 @@ body {
     }
 }
 
-.main-content .banner-promotion-child .banner-promotion-content {
+.banner-promotion .banner-promotion-child .banner-promotion-content {
     padding-left: 0.5rem;
     width: 30%;
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner-promotion-child .banner-promotion-content {
+    .banner-promotion .banner-promotion-child .banner-promotion-content {
         width: 40%;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner-promotion-child .banner-promotion-content {
+    .banner-promotion .banner-promotion-child .banner-promotion-content {
         padding-left: 0;
         width: 60%;
     }
 }
 
-.main-content .banner-promotion-child .banner-promotion-content p {
+.banner-promotion .banner-promotion-child .banner-promotion-content p {
     padding: 2rem 0;
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner-promotion-child .banner-promotion-content p {
+    .banner-promotion .banner-promotion-child .banner-promotion-content p {
         padding: 1rem 0;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner-promotion-child .banner-promotion-content p {
+    .banner-promotion .banner-promotion-child .banner-promotion-content p {
         padding-top: 1rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner-promotion-child .banner-promotion-content p {
+    .banner-promotion .banner-promotion-child .banner-promotion-content p {
         padding: 0;
     }
 }
 
-.main-content .banner-promotion-child .btn-promotion {
+.banner-promotion .banner-promotion-child .btn-promotion {
     margin-top: 3.5rem;
 
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner-promotion-child .btn-promotion {
-        margin-top: 0;
+    .banner-promotion .banner-promotion-child .btn-promotion {
+        margin-top: 1.3rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner-promotion-child .btn-promotion {
+    .banner-promotion .banner-promotion-child .btn-promotion {
         margin-top: 2rem;
 
     }
 }
 
-.main-content .banner-promotion-child .banner-promotion-content a {
+.banner-promotion .banner-promotion-child .banner-promotion-content a {
     padding: 1.5rem 3rem;
     background-color: var(--green-50);
     font-size: 1.6rem;
@@ -1391,19 +1394,19 @@ body {
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .banner-promotion-child .banner-promotion-content a {
+    .banner-promotion .banner-promotion-child .banner-promotion-content a {
         padding: 1.4rem 2.9rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner-promotion-child .banner-promotion-content a {
+    .banner-promotion .banner-promotion-child .banner-promotion-content a {
         padding: 1.2rem 2.5rem;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner-promotion-child .banner-promotion-content a {
+    .banner-promotion .banner-promotion-child .banner-promotion-content a {
         padding: 1rem 2.2rem;
         font-size: 1.2rem;
 
@@ -1411,47 +1414,47 @@ body {
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner-promotion-child .banner-promotion-content a {
+    .banner-promotion .banner-promotion-child .banner-promotion-content a {
         padding: 0.6rem 1.6rem;
         font-size: 0.8rem;
 
     }
 }
 
-.main-content .banner-promotion-child .banner-promotion-content a:hover {
+.banner-promotion .banner-promotion-child .banner-promotion-content a:hover {
     background-color: var(--black-90);
     border: var(--green-50) solid 1px;
 }
 
-.main-content .banner-promotion-child .banner-promotion-img {
+.banner-promotion .banner-promotion-child .banner-promotion-img {
     width: 70%;
 }
 
 @media only screen and (max-width:1460px) {
-    .main-content .banner-promotion-child .banner-promotion-img {
+    .banner-promotion .banner-promotion-child .banner-promotion-img {
         width: 60%;
     }
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .banner-promotion-child .banner-promotion-img {
+    .banner-promotion .banner-promotion-child .banner-promotion-img {
         width: 100%;
     }
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .banner-promotion-child .banner-promotion-img {
+    .banner-promotion .banner-promotion-child .banner-promotion-img {
         padding-top: 2rem;
     }
 }
 
 @media only screen and (max-width:481px) {
-    .main-content .banner-promotion-child .banner-promotion-img {
+    .banner-promotion .banner-promotion-child .banner-promotion-img {
         padding-top: 2rem;
     }
 }
 
-.main-content .banner-promotion-child .banner-promotion-img img {
+.banner-promotion .banner-promotion-child .banner-promotion-img img {
     width: 100%;
 }
 
@@ -1461,6 +1464,9 @@ body {
     padding-top: 11rem;
     padding-bottom: 7rem;
 }
+.main-content .pages-detail .container {
+    max-width: 100%;
+}
 
 .main-content .pages-detail .pages-detail-child {
     display: flex;
@@ -1468,60 +1474,69 @@ body {
     align-items: center;
 }
 
-.main-content .pages-detail .pages-detail-child .pages-detail-title {
+.pages-detail .pages-detail-child .pages-detail-title {
     text-align: center;
 }
 
-.main-content .pages-detail .pages-detail-child h1 {
+.pages-detail .pages-detail-child h1 {
     padding-top: 2rem;
 }
 
-.main-content .pages-detail .pages-detail-child .pages-detail-text {
+.pages-detail .pages-detail-child .pages-detail-text {
     padding-top: 2rem;
     text-align: center;
+    max-width: 100rem;
 }
 
-.main-content .pages-detail .pages-detail-child .pages-detail-img {
+.pages-detail .pages-detail-child .pages-detail-img {
     padding-top: 4rem;
     width: 100%;
 }
 
-.main-content .pages-detail .pages-detail-img img {
+.pages-detail .pages-detail-img img {
     width: 100%;
 }
 
 /* product-detail */
 /* làm sau */
-.main-content .product-detail {
+.product-detail {
     padding: 8rem 0;
     background-color: var(--white-5);
 }
+.product-detail .container{
+    max-width: 100%;
+}
+@media only screen and (max-width:1025px) {
+    .product-detail {
+        display: none;
+    }
+}
 
-.main-content .product-detail .product-detail-child {
+.product-detail .product-detail-child {
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
 }
 
-.main-content .product-detail .product-detail-slide {
+.product-detail .product-detail-slide {
     display: flex;
     padding-top: 3rem;
 }
 
-.main-content .product-detail .product-slide-item {
+.product-detail .product-slide-item {
     margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main-content .product-detail .product-img-wrap img,
-.main-content .product-detail .product-img-wrap {
+.product-detail .product-img-wrap img,
+.product-detail .product-img-wrap {
     border-radius: 1rem;
 }
 
-.main-content .product-detail .product-slide-item span {
+.product-detail .product-slide-item span {
     font-size: 1.6rem;
     padding: 1rem 0;
 }
@@ -1548,23 +1563,23 @@ body {
     }
 }
 
-.main-content .features .features-title {
+.features .features-title {
     text-align: center;
     padding-top: 2rem;
+    max-width: 112rem;
 }
 
 
-.main-content .features .features-list {
-    width: 100%;
+.features .features-list {
     padding-top: 5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 5em;
+    column-gap: 3em;
     row-gap: 3em;
 }
 
 @media only screen and (max-width:1201px) {
-    .main-content .features .features-list {
+    .features .features-list {
         padding-top: 5rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1574,7 +1589,7 @@ body {
 }
 
 @media only screen and (max-width:1025px) {
-    .main-content .features .features-list {
+    .features .features-list {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5em;
         row-gap: 3em;
@@ -1582,7 +1597,7 @@ body {
 }
 
 @media only screen and (max-width:769px) {
-    .main-content .features .features-list {
+    .features .features-list {
         display: flex;
         flex-direction: column;
         align-items: center;
