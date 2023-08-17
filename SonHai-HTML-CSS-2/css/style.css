@@ -134,7 +134,7 @@ body {
     text-decoration: none;
     color: var(--black-90);
     font-size: 1.9rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1025px) {
@@ -143,7 +143,7 @@ body {
         text-decoration: none;
         color: var(--black-90);
         font-size: 1.9rem;
-        font-weight: 600;
+        font-weight: 400;
     }
 }
 
@@ -160,7 +160,7 @@ body {
     border-radius: 0.5rem;
     background-color: var(--green-50);
     color: var(--white);
-    font-weight: 600;
+    font-weight: 400;
 
 }
 
@@ -293,7 +293,7 @@ body {
     position: relative;
     font-size: 6.7rem;
     line-height: 8rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1460px) {
@@ -332,7 +332,7 @@ body {
     color: var(--green-50);
     font-size: 6.2rem;
     line-height: 8rem;
-    font-weight: 600;
+    font-weight: 400;
     background-image: url(../assets/img/Vector.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -459,7 +459,7 @@ body {
     padding-top: 0;
     font-size: 5.5rem;
     color: var(--green-50);
-    font-weight: 600;
+    font-weight: 400;
 
 }
 
@@ -496,7 +496,7 @@ body {
 .banner .featured-item span {
     padding-left: 1rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 
@@ -569,7 +569,7 @@ body {
     margin-right: 2rem;
     padding: 1.5rem 4rem;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1460px) {
@@ -739,7 +739,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 400;
     background-color: var(--white);
     padding: 1rem 1.5rem;
     list-style: none;
@@ -807,6 +807,7 @@ body {
     padding: 7rem 2rem;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -848,6 +849,7 @@ body {
 .special .special-content {
     padding: 0 2rem;
     width: 50%;
+
 }
 
 @media only screen and (max-width:1025px) {
@@ -888,7 +890,7 @@ body {
     width: 17rem;
     height: 3.3rem;
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 400;
     background-color: var(--green-50);
     color: var(--white);
     border-radius: 1.5rem;
@@ -961,7 +963,7 @@ body {
     border: var(--green-50) solid 0.1rem;
     background-color: var(--white);
     color: var(--green-50);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1201px) {
@@ -998,6 +1000,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 @media only screen and (max-width:1601px) {
@@ -1031,7 +1034,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5em;
     row-gap: 3em;
+
 }
+
 
 @media only screen and (max-width:1201px) {
     .advanced-filter .advanced-filter-grid {
@@ -1065,6 +1070,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 7rem 24rem;
+    overflow: hidden;
 }
 
 @media only screen and (max-width:1601px) {
@@ -1117,14 +1123,23 @@ body {
 
 .hover-cart .hover-cart-product .product-color .gray {
     background-color: var(--black-70);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
 }
 
 .hover-cart .hover-cart-product .product-color .green {
     background-color: var(--green-50);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
 }
 
 .hover-cart .hover-cart-product .product-color .red {
     background-color: var(--red-60);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
 }
 
 /* homepages-demo */
@@ -1135,6 +1150,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 24rem;
+    overflow: hidden;
 }
 
 @media only screen and (max-width:1601px) {
@@ -1152,7 +1168,7 @@ body {
 .homepages .homepages-child span {
     color: var(--green-50);
     font-size: 8rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1460px) {
@@ -1210,6 +1226,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5em;
     row-gap: 3em;
+
 }
 
 @media only screen and (max-width:1201px) {
@@ -1243,6 +1260,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 10rem 24rem 0 24rem;
+    overflow: hidden;
 }
 
 @media only screen and (max-width:1601px) {
@@ -1387,7 +1405,7 @@ body {
     padding: 1.5rem 3rem;
     background-color: var(--green-50);
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--white);
     text-decoration: none;
     border-radius: 0.5rem;
@@ -1463,7 +1481,9 @@ body {
 .main-content .pages-detail {
     padding-top: 11rem;
     padding-bottom: 7rem;
+    overflow: hidden;
 }
+
 .main-content .pages-detail .container {
     max-width: 100%;
 }
@@ -1503,9 +1523,11 @@ body {
     padding: 8rem 0;
     background-color: var(--white-5);
 }
-.product-detail .container{
+
+.product-detail .container {
     max-width: 100%;
 }
+
 @media only screen and (max-width:1025px) {
     .product-detail {
         display: none;
@@ -1516,12 +1538,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
 .product-detail .product-detail-slide {
     display: flex;
     padding-top: 3rem;
+    max-width: 100%;
+    overflow: auto;
 }
 
 .product-detail .product-slide-item {
@@ -1548,6 +1571,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 @media only screen and (max-width:1460px) {
@@ -1576,6 +1600,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 3em;
     row-gap: 3em;
+    
 }
 
 @media only screen and (max-width:1201px) {
@@ -1642,7 +1667,7 @@ body {
 }
 
 .footer .footer-item .footer-title h1 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 6.4rem;
     color: var(--white);
 }
@@ -1720,11 +1745,11 @@ body {
 
 .footer .footer-item .footer-text .sp-between {
     color: var(--yellow);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .footer .footer-item .footer-text .sp-right {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .footer .footer-item ul {
@@ -1801,7 +1826,7 @@ body {
 @media only screen and (max-width:1460px) {
     .footer .footer-item .btn-footer {
         font-size: 1.7rem;
-        font-weight: 600;
+        font-weight: 400;
         padding-top: 6rem;
     }
 }
@@ -1809,7 +1834,7 @@ body {
 @media only screen and (max-width:1201px) {
     .footer .footer-item .btn-footer {
         font-size: 1.4rem;
-        font-weight: 600;
+        font-weight: 400;
         padding-top: 4rem;
     }
 }
@@ -1817,7 +1842,7 @@ body {
 @media only screen and (max-width:1025px) {
     .footer .footer-item .btn-footer {
         font-size: 1.3rem;
-        font-weight: 600;
+        font-weight: 400;
         padding-top: 4rem;
     }
 }

@@ -41,7 +41,7 @@
 
 .main-content .content-item .title {
     font-size: 4.4rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 
@@ -199,7 +199,7 @@
     font-size: 2rem;
     line-height: 2.4rem;
     padding-top: 2rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1460px) {
@@ -285,7 +285,7 @@
     padding: 0.5rem 2.2rem;
     border-radius: 0.2rem;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--white);
 }
 
@@ -305,7 +305,7 @@
 }
 
 .hover-cart .hover-cart-product .product-name p {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1201px) {
@@ -340,6 +340,37 @@
         width: 2.6rem;
         height: 2.6rem;
         border-radius: 0.5rem;
+    }
+}
+.hover-cart .hover-cart-product .product-color .wrap-color{
+    width: 3rem;
+    height: 3rem;
+}
+.hover-cart .hover-cart-product .product-color .wrap-color:hover{
+    border: var(--black-90) solid 0.1rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+@media only screen and (max-width:1025px) {
+    .hover-cart .hover-cart-product .product-color .wrap-color{
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .hover-cart .hover-cart-product .product-color .wrap-color{
+        width: 2rem;
+        height: 2rem;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (max-width:481px) {
+    .hover-cart .hover-cart-product .product-color .wrap-color{
+        width: 1.8rem;
+        height: 1.8rem;
     }
 }
 /* homepages-demo */
@@ -419,7 +450,7 @@
     transform: translate(-50%, -50%);
     text-decoration: none;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--white);
     background-color: var(--green-50);
     padding: 1.4rem 2.8rem;
@@ -439,7 +470,7 @@
 }
 
 .homepages .homepages-demo-item h3 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 2rem;
     padding-top: 1rem;
 }
@@ -514,7 +545,7 @@
 .mobile .mobile-child .mobile-demo-item span {
     padding-top: 2rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -544,7 +575,7 @@
 /* awesome-features-span */
 .main-content .awesome-features-span {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--green-50);
 }
 
@@ -553,6 +584,7 @@
         font-size: 1.6rem;
     }
 }
+
 @media only screen and (max-width:1025px) {
     .main-content .awesome-features-span {
         font-size: 1.4rem;
@@ -570,6 +602,7 @@
         font-size: 1rem;
     }
 }
+
 /* features-list-item */
 .features .features-list-item {
     width: 33rem;
@@ -649,14 +682,14 @@
 .features .features-list-item h5 {
     padding-top: 3rem;
     font-size: 2.3rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 @media only screen and (max-width:1460px) {
     .features .features-list-item h5 {
         padding-top: 1.5rem;
         font-size: 1.7rem;
-        font-weight: 500;
+        font-weight: 400;
     }
 }
 
@@ -710,5 +743,70 @@
 @media only screen and (max-width:481px) {
     .features .features-list-item .features-list-text {
         font-size: 1.2rem;
+    }
+}
+
+.slideUp {
+    animation-name: item-up;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.slideRight {
+    animation-name: right;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.slideLeft {
+    animation-name: left;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+.slide-btn-up{
+    animation-name: btn-up;
+    animation-delay: 0;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes item-up {
+    from {
+        translate: 0 70rem 0;
+    }
+
+    to {
+        translate: 0 0 0;
+    }
+}
+
+@keyframes left {
+    from {
+        translate: 100rem 0 0;
+    }
+
+    to {
+        translate: 0 0 0;
+    }
+}
+
+@keyframes right {
+    from {
+        translate: -70rem 0 0;
+    }
+
+    to {
+        translate: 0 0 0;
+    }
+}
+
+@keyframes btn-up {
+    from {
+        translate: 0 10rem 0;
+    }
+    to{
+        translate: 0 0 0;
     }
 }
