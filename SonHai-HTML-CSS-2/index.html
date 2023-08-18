@@ -27,14 +27,32 @@
                     </div>
                     <div class="header-subnav">
                         <div class="header-subnav-i">
-                            <i class="fa-solid fa-bars"></i>
+                            <label for="nav__mobile-input" class="iconMenu">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                            <input type="checkbox" class="nav__input" id="nav__mobile-input">
+                            <label for="nav__mobile-input" class="nav__overlay"></label>
+                            <label for="nav__mobile-input" class="nav__mobile">
+                                <div class="iconMultiply">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+
+                                <ul id="navUl__mobile">
+                                    <a href="#"><li>Home</li></a>
+                                    <a href="#"><li>Features</li></a>
+                                    <a href="#"><li>Demos</li></a>
+                                </ul>
+                                <div class="header-buy">
+                                    <a href="#"><span>Purchase to Day $19</span></a>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div class="header-right">
                         <div class="header-navbar">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Features</a></li>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#features">Features</a></li>
                                 <li><a href="#">Demos</a></li>
                             </ul>
                         </div>
@@ -48,7 +66,7 @@
         </div>
         <div class="main-content">
             <div class="content-item">
-                <div class="banner">
+                <div id="home" class="banner">
                     <div class="container">
                         <div class="banner-backgroud">
                             <div class="content-banner">
@@ -529,7 +547,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="features">
+                <div id="features" class="features">
                     <div class="container">
                         <div class="features-child">
                             <span class="awesome-features-span">AWESOME FEATURES</span>

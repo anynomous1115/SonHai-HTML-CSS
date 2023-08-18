@@ -96,26 +96,26 @@
 
 @media only screen and (max-width:1460px) {
     .main-content .content-item .text {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         line-height: 2.5rem;
     }
 }
 
 @media only screen and (max-width:1201px) {
     .main-content .content-item .text {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
 }
 
 @media only screen and (max-width:769px) {
     .main-content .content-item .text {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
     }
 }
 
 @media only screen and (max-width:481px) {
     .main-content .content-item .text {
-        font-size: 1rem;
+        font-size: 1.8rem;
         line-height: 1.5rem;
 
     }
@@ -211,7 +211,7 @@
 
 @media only screen and (max-width:1201px) {
     .advanced-filter .advanced-filter-grid-item .title-filter {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding-top: 1.2rem;
 
     }
@@ -219,7 +219,7 @@
 
 @media only screen and (max-width:481px) {
     .advanced-filter .advanced-filter-grid-item .title-filter {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         padding-top: 1.2rem;
 
     }
@@ -310,7 +310,7 @@
 
 @media only screen and (max-width:1201px) {
     .hover-cart .hover-cart-product .product-name p {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -484,7 +484,7 @@
 
 @media only screen and (max-width:1201px) {
     .homepages .homepages-demo-item h3 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         padding-top: 1.3rem;
 
     }
@@ -492,7 +492,7 @@
 
 @media only screen and (max-width:481px) {
     .homepages .homepages-demo-item h3 {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
 
     }
 }
@@ -549,7 +549,6 @@
     text-align: center;
 }
 
-@media only screen and (max-width:1601px) {}
 
 @media only screen and (max-width:1460px) {
     .mobile .mobile-child .mobile-demo-item span {
@@ -559,15 +558,8 @@
 
 @media only screen and (max-width:1201px) {
     .mobile .mobile-child .mobile-demo-item span {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         padding-top: 1.5rem;
-
-    }
-}
-
-@media only screen and (max-width:481px) {
-    .mobile .mobile-child .mobile-demo-item span {
-        font-size: 1.1rem;
 
     }
 }
@@ -591,17 +583,6 @@
     }
 }
 
-@media only screen and (max-width:769px) {
-    .main-content .awesome-features-span {
-        font-size: 1.2rem;
-    }
-}
-
-@media only screen and (max-width:481px) {
-    .main-content .awesome-features-span {
-        font-size: 1rem;
-    }
-}
 
 /* features-list-item */
 .features .features-list-item {
@@ -689,7 +670,7 @@
     .features .features-list-item h5 {
         padding-top: 1.5rem;
         font-size: 1.7rem;
-        font-weight: 400;
+        font-weight: 500;
     }
 }
 
@@ -703,13 +684,7 @@
 
 @media only screen and (max-width:769px) {
     .features .features-list-item h5 {
-        font-size: 1.6rem;
-    }
-}
-
-@media only screen and (max-width:481px) {
-    .features .features-list-item h5 {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -722,27 +697,24 @@
 @media only screen and (max-width:1460px) {
     .features .features-list-item .features-list-text {
         padding-top: 1rem;
-        font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width:1025px) {
     .features .features-list-item .features-list-text {
-        padding-top: 1rem;
         font-size: 1.9rem;
     }
 }
 
 @media only screen and (max-width:769px) {
     .features .features-list-item .features-list-text {
-        padding-top: 1rem;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 }
 
 @media only screen and (max-width:481px) {
     .features .features-list-item .features-list-text {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 }
 
