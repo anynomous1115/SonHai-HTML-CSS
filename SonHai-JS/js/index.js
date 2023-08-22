@@ -55,8 +55,8 @@ const products = [
     },
     {
         name: 'Evlution Nutrition BCAA5000',
-        image: 'https://gougi-demo.myshopify.com/cdn/shop/products/5.1_1920x.jpg?v=1667212272',
-        imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/5.2_360x.jpg?v=1667212274',
+        image: 'https://gougi-demo.myshopify.com/cdn/shop/products/5.1_720x.jpg?v=1667212272',
+        imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/5.2_720x.jpg?v=1667212274',
         disCount: 31,
         originalPrice: 98.00,
         color: [],
@@ -90,12 +90,40 @@ const products = [
         size: ['S', 'M', 'L']
     },
 ]
+
 function showProduct(data) {
     const productItem = document.querySelector(".product-grid");
-    const sizeProduct = document.getElementsByClassName(".size")
+
     for (let item of data) {
+
         var currentProduct = item.originalPrice - (item.originalPrice / 100) * item.disCount;
-        console.log(currentProduct);
+
+        var sizeString = "";
+        function showSize(data) {
+            var sizeAfter = [];
+            for (let i = 0; i < data.length; i++) {
+                let div = "<div class='size-item'>" + item.size[i] + "</div>";
+                sizeAfter.push(div);
+            }
+            for (let i = 0; i < sizeAfter.length; i++) {
+                sizeString += sizeAfter[i];
+            }
+        }
+        showSize(item.size);
+
+        var colorString = "";
+        function showColor(data) {
+            var colorAfter = [];
+            for (let i = 0; i < data.length; i++) {
+                let div = '<div class="color" onclick="" ><div class="color-item" style="background-color:' + item.color[i] + '"></div></div>';
+                colorAfter.push(div);
+            }
+            for (let i = 0; i < colorAfter.length; i++) {
+                colorString += colorAfter[i]
+            }
+
+        }
+        showColor(item.color)
         productItem.innerHTML += `
                     <div class="product-grid-item">
                     <div class="wrap-img">
@@ -108,7 +136,10 @@ function showProduct(data) {
                         </span>
                         <div class="wish-list">
                             <a href="" class="favourite">
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-heart heartAnimation"></i>
+                            </a>
+                            <a href="" class="favourite">
+                                <i class="fa-solid fa-rotate"></i>
                             </a>
                         </div>
                         <div class="btn-product-item">
@@ -120,6 +151,7 @@ function showProduct(data) {
                             </a>
                         </div>
                         <div class="size">
+                        ${sizeString}
                         </div>
                     </div>
                     <div class="img-desc">
@@ -128,23 +160,57 @@ function showProduct(data) {
                         </h3>
                         <div class="price">
                             <span class="current">
-                                ${currentProduct}
+                            $${currentProduct}
                             </span>
                             <span class="original-price">
-                                ${item.originalPrice}.00
+                            $${item.originalPrice}.00
                             </span>
                         </div>
                         <!-- label and -->
                         <div class="color-product">
-                            <div class="color">
-                            <div class="color-item"></div>
-                            </div>
+                            ${colorString}
                         </div>
                     </div>
                     </div>
               `
-
     }
-
 }
+
 showProduct(products)
+
+const colors = document.querySelectorAll('.color');
+
+// Lặp qua từng phần tử và gắn sự kiện click
+colors.forEach(function (color) {
+    color.addEventListener('click', function () {
+        // Kiểm tra xem phần tử có lớp "open" hay không
+        if (this.classList.contains('active')) {
+            // Nếu có, xóa
+            this.classList.remove('active');
+        } else {
+            let parent = this.parentNode;
+            let child = parent.querySelectorAll('.color')
+            // Nếu không, thêm
+            child.forEach(function (c) {
+                c.classList.remove('active');
+            })
+            this.classList.add('active');
+        }
+    });
+})
+
+const sizes = document.querySelectorAll(".size-item");
+sizes.forEach(function (size) {
+    size.addEventListener('click', function () {
+        if(this.classList.contains('active-size')){
+            this.classList.remove('active-size')
+        }else{
+            let parent = this.parentNode;
+            let child =parent.querySelectorAll('.size-item')
+            child.forEach(function (c){
+                c.classList.remove('active-size')
+            })
+            this.classList.add('active-size')
+        }
+    })
+})
