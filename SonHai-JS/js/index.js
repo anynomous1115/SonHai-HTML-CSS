@@ -1,5 +1,6 @@
 const products = [
     {
+        id: 1,
         name: 'A Beautiful Sweater For Women',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/01_1920x.png?v=1640740769',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/17097755_37_D8_720x.png?v=1640740769',
@@ -9,6 +10,7 @@ const products = [
         size: ['M', 'L', 'XL']
     },
     {
+        id: 2,
         name: 'A Fashionable Crossbody Bag',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/05_1920x.png?v=1640740761',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/17035136_37_720x.png?v=1640740761',
@@ -18,6 +20,7 @@ const products = [
         size: ['S', 'M', 'L']
     },
     {
+        id: 3,
         name: 'Beautiful Earrings',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/b1_grande.png?v=1640740744',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/b2_720x.png?v=1640740744',
@@ -27,6 +30,7 @@ const products = [
         size: []
     },
     {
+        id: 4,
         name: 'Boot Solar Wave Hiking',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/02_1920x.png?v=1640740756',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/021_720x.png?v=1640740756',
@@ -36,6 +40,7 @@ const products = [
         size: []
     },
     {
+        id: 5,
         name: 'Cellucor Amino Acid',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/3.1_1920x.jpg?v=1667211881',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/3.2_540x.jpg?v=1667211881',
@@ -45,6 +50,7 @@ const products = [
         size: []
     },
     {
+        id: 6,
         name: 'Check Structured Blazer',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/IMG_15_grande.png?v=1640740810',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/17095934_43_D2_360x.png?v=1640740810',
@@ -54,6 +60,7 @@ const products = [
         size: ['S', 'M', 'L', 'XL']
     },
     {
+        id: 7,
         name: 'Evlution Nutrition BCAA5000',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/5.1_720x.jpg?v=1667212272',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/5.2_720x.jpg?v=1667212274',
@@ -63,6 +70,7 @@ const products = [
         size: []
     },
     {
+        id: 8,
         name: 'Fashion Cat Eye Glasses',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/h2_1920x.png?v=1640740713',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/h3_360x.png?v=1640740713',
@@ -72,6 +80,7 @@ const products = [
         size: []
     },
     {
+        id: 9,
         name: 'Fashion High Heels Boots',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/y1_grande.png?v=1640740693',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/y2_360x.png?v=1640740693',
@@ -81,6 +90,7 @@ const products = [
         size: ['S', 'M', 'L', 'XL']
     },
     {
+        id: 10,
         name: 'Fashion High Heels Shoes',
         image: 'https://gougi-demo.myshopify.com/cdn/shop/products/87090532_07_D41_grande.png?v=1640740797',
         imageHover: 'https://gougi-demo.myshopify.com/cdn/shop/products/87090532_071_360x.png?v=1640740797',
@@ -91,13 +101,74 @@ const products = [
     },
 ]
 
+let listCart = [];
+
+function addCart(id) {
+    const item = products.find(i => i.id === id) //tìm kiếm phần tử đầu tiên thoải mãn điều kiện
+    item.totalItem = item.currentPrice
+    if (listCart.indexOf(item) == -1) {
+        listCart.push(item)
+        item.quantity = 1
+    } else {
+        item.quantity = item.quantity + 1
+        item.totalItem = item.quantity * item.currentPrice;
+    }
+    // updateQuantity()
+    reloadCart()
+}
+console.log(listCart);
+function reloadCart() {
+    const cartColum = document.querySelector(".cart-colum")
+    let totalCart = 0
+    cartColum.innerHTML = '';
+    listCart.forEach((value, key) => {
+        totalCart = totalCart + value.totalItem
+        if (value != null) {
+            cartColum.innerHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-img">
+                            <img src="${value.image}" alt="">
+                        </div>
+                        <div class="cart-item-desc">
+                            <h3>${value.name}</h3>
+                            <p><span id="cart-item-size">M</span>,<span id="cart-item-color">Olive</span></p>
+                            <span id="cart-item-price"></span>
+                            <div class="quantity">
+                                <button class="quantity-left" onclick="updateQuantity(${key}, ${value.quantity - 1})"><i class="fa-solid fa-minus"></i></button>
+                                <div class="count">${value.quantity}</div>
+                                <button class="quantity-right" onclick="updateQuantity(${key}, ${value.quantity + 1})"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="remove" onclick="removeCart(${key})"><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <hr>`;
+        }
+    })
+    const subtotalPrice = document.querySelector(".subtotal-price")
+    subtotalPrice.innerText = totalCart.toLocaleString();
+}
+function updateQuantity(key, quantity) {
+    if (quantity == 0) {
+        listCart.splice(listCart[key], 1)
+    } else {
+        listCart[key].quantity = quantity;
+        listCart[key].totalItem = quantity * listCart[key].currentPrice;
+    }
+    reloadCart()
+    console.log("ok", listCart);
+}
+function removeCart(key, id) {
+    listCart.splice(listCart[key], 1)
+    reloadCart()
+
+}
 function showProduct(data) {
     const productItem = document.querySelector(".product-grid");
 
     for (let item of data) {
 
         var currentProduct = item.originalPrice - (item.originalPrice / 100) * item.disCount;
-
+        item.currentPrice = currentProduct
         var sizeString = "";
         function showSize(data) {
             var sizeAfter = [];
@@ -124,6 +195,7 @@ function showProduct(data) {
 
         }
         showColor(item.color)
+
         productItem.innerHTML += `
                     <div class="product-grid-item">
                     <div class="wrap-img">
@@ -146,9 +218,11 @@ function showProduct(data) {
                             <a href="" class="quick-view">
                                 Quick View
                             </a>
-                            <a href="" class="add-to-cart">
-                                Add To Cart
-                            </a>
+                            <button onclick="addCart(${item.id})" id="add-to-cart">
+                                <label for="add-input" class="btnCart">
+                                    Add To Cart
+                                </label>
+                            </button>
                         </div>
                         <div class="size">
                         ${sizeString}
@@ -160,7 +234,7 @@ function showProduct(data) {
                         </h3>
                         <div class="price">
                             <span class="current">
-                            $${currentProduct}
+                            $${item.currentPrice}
                             </span>
                             <span class="original-price">
                             $${item.originalPrice}.00
@@ -174,8 +248,9 @@ function showProduct(data) {
                     </div>
               `
     }
-}
 
+    // const btn = document.getElementsByClassName("add-to-cart")
+}
 showProduct(products)
 
 const colors = document.querySelectorAll('.color');
@@ -202,12 +277,12 @@ colors.forEach(function (color) {
 const sizes = document.querySelectorAll(".size-item");
 sizes.forEach(function (size) {
     size.addEventListener('click', function () {
-        if(this.classList.contains('active-size')){
+        if (this.classList.contains('active-size')) {
             this.classList.remove('active-size')
-        }else{
+        } else {
             let parent = this.parentNode;
-            let child =parent.querySelectorAll('.size-item')
-            child.forEach(function (c){
+            let child = parent.querySelectorAll('.size-item')
+            child.forEach(function (c) {
                 c.classList.remove('active-size')
             })
             this.classList.add('active-size')
