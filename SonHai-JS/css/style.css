@@ -331,7 +331,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    overflow: auto;
     padding: 0 1rem;
 
 }
@@ -341,6 +340,7 @@ body {
 }
 
 .cart .cart-colum {
+    overflow: auto;
     width: 100%;
     margin-top: 2rem;
 }
@@ -409,9 +409,9 @@ body {
 .cart .cart-btn {
     position: fixed;
     bottom: 0;
-    z-index: 10;
-    background-color: var(--white);
-    width: 50%;
+    background-color: var(--black-5);
+    width: 100%;
+    height: 3rem;
 }
 
 .cart .cart-btn .subtotal {
@@ -429,6 +429,9 @@ body {
     text-align: center;
 }
 
+.cart .remove {
+    margin-left: 1rem;
+}
 /* đóng mở */
 .cart__input {
     display: none;
@@ -445,7 +448,6 @@ body {
 }
 
 .cart__open {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -462,7 +464,6 @@ body {
 }
 
 .cart__input:checked~.cart__open {
-    display: block;
     transform: translateX(0%);
 }
 .iconMultiply i{

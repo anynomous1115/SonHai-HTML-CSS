@@ -101,67 +101,9 @@ const products = [
     },
 ]
 
-let listCart = [];
 
-function addCart(id) {
-    const item = products.find(i => i.id === id) //tìm kiếm phần tử đầu tiên thoải mãn điều kiện
-    item.totalItem = item.currentPrice
-    if (listCart.indexOf(item) == -1) {
-        listCart.push(item)
-        item.quantity = 1
-    } else {
-        item.quantity = item.quantity + 1
-        item.totalItem = item.quantity * item.currentPrice;
-    }
-    // updateQuantity()
-    reloadCart()
-}
-console.log(listCart);
-function reloadCart() {
-    const cartColum = document.querySelector(".cart-colum")
-    let totalCart = 0
-    cartColum.innerHTML = '';
-    listCart.forEach((value, key) => {
-        totalCart = totalCart + value.totalItem
-        if (value != null) {
-            cartColum.innerHTML += `
-                    <div class="cart-item">
-                        <div class="cart-item-img">
-                            <img src="${value.image}" alt="">
-                        </div>
-                        <div class="cart-item-desc">
-                            <h3>${value.name}</h3>
-                            <p><span id="cart-item-size">M</span>,<span id="cart-item-color">Olive</span></p>
-                            <span id="cart-item-price"></span>
-                            <div class="quantity">
-                                <button class="quantity-left" onclick="updateQuantity(${key}, ${value.quantity - 1})"><i class="fa-solid fa-minus"></i></button>
-                                <div class="count">${value.quantity}</div>
-                                <button class="quantity-right" onclick="updateQuantity(${key}, ${value.quantity + 1})"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                        <div class="remove" onclick="removeCart(${key})"><i class="fa-solid fa-xmark"></i></div>
-                    </div>
-                    <hr>`;
-        }
-    })
-    const subtotalPrice = document.querySelector(".subtotal-price")
-    subtotalPrice.innerText = totalCart.toLocaleString();
-}
-function updateQuantity(key, quantity) {
-    if (quantity == 0) {
-        listCart.splice(listCart[key], 1)
-    } else {
-        listCart[key].quantity = quantity;
-        listCart[key].totalItem = quantity * listCart[key].currentPrice;
-    }
-    reloadCart()
-    console.log("ok", listCart);
-}
-function removeCart(key, id) {
-    listCart.splice(listCart[key], 1)
-    reloadCart()
 
-}
+
 function showProduct(data) {
     const productItem = document.querySelector(".product-grid");
 
@@ -186,7 +128,7 @@ function showProduct(data) {
         function showColor(data) {
             var colorAfter = [];
             for (let i = 0; i < data.length; i++) {
-                let div = '<div class="color" onclick="" ><div class="color-item" style="background-color:' + item.color[i] + '"></div></div>';
+                let div = '<div class="color"><div class="color-item" style="background-color:' + item.color[i] + '"></div></div>';
                 colorAfter.push(div);
             }
             for (let i = 0; i < colorAfter.length; i++) {
@@ -218,10 +160,8 @@ function showProduct(data) {
                             <a href="" class="quick-view">
                                 Quick View
                             </a>
-                            <button onclick="addCart(${item.id})" id="add-to-cart">
-                                <label for="add-input" class="btnCart">
+                            <button data-id="${item.id}" class="add-to-cart">
                                     Add To Cart
-                                </label>
                             </button>
                         </div>
                         <div class="size">
@@ -289,3 +229,70 @@ sizes.forEach(function (size) {
         }
     })
 })
+
+let listCart = [];
+const element = document.querySelector(".add-to-cart")
+console.log(element);
+element.onclick = addCart() 
+function addCart() {
+    let id = element.getAttribute("data-id")
+    console.log(id);
+    const itemInCart = listCart.find(i => i.id === id)
+    if (!itemInCart) {
+        listCart.push({
+            id,
+            quantity: 1,
+        })
+
+    } else {
+        itemInCart.quantity += 1
+    }
+    // reloadCart()
+    console.log(listCart);
+}
+function reloadCart() {
+    let newListCart = []
+    listCart.map(function (item) {
+        const itemInProduct = products.find(i => i.id === item.id)
+        itemInProduct.quantity = item.quantity
+        newListCart.push(itemInProduct)
+    })
+    const cartColum = document.querySelector(".cart-colum")
+    cartColum.innerHTML = '';
+    newListCart.forEach((value) => {
+        if (value != null) {
+            cartColum.innerHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-img">
+                            <img src="${value.image}" alt="">
+                        </div>
+                        <div class="cart-item-desc">
+                            <h3>${value.name}</h3>
+                            <p><span id="cart-item-size">M</span>,<span id="cart-item-color">Olive</span></p>
+                            <span id="cart-item-price">${value.currentPrice}</span>
+                            <div class="quantity">
+                                <button class="quantity-left"><i class="fa-solid fa-minus"></i></button>
+                                <div class="count">${value.quantity}</div>
+                                <button class="quantity-right"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="remove"><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <hr>`;
+        }
+    })
+    const quantityRight = document.querySelector(".quantity-right");
+    quantityRight.addEventListener('click', augment())
+    console.log(item.quantity);
+
+}
+function augment(){
+    console.log("gsdsvdjasvdhasvdh")
+
+}
+
+function removeCart(key, id) {
+    listCart.splice(listCart[key], 1)
+    reloadCart()
+
+}
