@@ -1,4 +1,17 @@
 
+function addCart(id) {
+    listCart = JSON.parse(localStorage.getItem('listCart'));
+    const itemInCart = listCart.find(i => i.id === id)
+    if (!itemInCart) {
+        listCart.push({
+            id,
+            quantity: 1,
+        })
+    } else {
+        itemInCart.quantity += 1
+    }
+    reloadCart()
+}
 function reloadCart() {
     let newListCart = []
     listCart.map(function (item) {
@@ -6,6 +19,7 @@ function reloadCart() {
         itemInProduct.quantity = item.quantity
         newListCart.push(itemInProduct)
     })
+    const cartColum = document.querySelector(".cart-colum")
     cartColum.innerHTML = '';
     newListCart.forEach((value) => {
         if (value != null) {
@@ -30,7 +44,10 @@ function reloadCart() {
         totalItemCart(value)
     })
     totalCart(newListCart)
-    console.log(quantityRight);
+    saveLocalStorage('listCart', listCart)
+    const quantityRight = document.getElementsByClassName("quantity-right");
+    const quantityLeft = document.getElementsByClassName("quantity-left");
+    const removeItemCart = document.getElementsByClassName("remove")
     for (let i = 0; i < quantityRight.length; i++) {
         quantityRight[i].addEventListener('click', augment, false)
     }
@@ -40,31 +57,28 @@ function reloadCart() {
     for (let i = 0; i < removeItemCart.length; i++) {
         removeItemCart[i].addEventListener('click', remove, false)
     }
+
 }
-
-
-
 const augment = function () {
     const id = parseInt(this.getAttribute("data-id"))
-    const item = listCart.find(i => i.id === id)
-    item.quantity += 1
+    const index = listCart.findIndex(i => i.id === id)
+    listCart[index].quantity += 1
     reloadCart()
 }
 const reduce = function () {
     const id = parseInt(this.getAttribute("data-id"))
-    const item = listCart.find(i => i.id === id)
-    if (item.quantity === 0) {
-        listCart.splice(item, 1)
+    const index = listCart.findIndex(i => i.id === id)
+    if (listCart[index].quantity === 0) {
+        listCart.splice(index, 1)
     } else {
-        item.quantity -= 1
+        listCart[index].quantity -= 1
     }
-    reloadCart()
 
+    reloadCart()
 }
 const remove = function () {
     const id = parseInt(this.getAttribute("data-id"));
-    const item = listCart.find(i => i.id === id);
-    listCart.splice(item, 1);
+    const index = listCart.findIndex(i => i.id === id)
+    listCart.splice(index, 1)
     reloadCart();
-
 }

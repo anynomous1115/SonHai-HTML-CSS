@@ -1,7 +1,9 @@
 function totalCart(newListCart) {
     let totalCart = 0
-    newListCart.map(function(item){
-        totalCart+=item.totalItem
+    newListCart.map(function (item) {
+        totalCart += item.totalItem
     })
-    subtotalPrice.innerText = totalCart.toLocaleString();
+
+    const subtotalPrice = document.querySelector(".subtotal-price")
+    subtotalPrice.innerText = "$" + totalCart.toLocaleString();
 }

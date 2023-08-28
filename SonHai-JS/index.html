@@ -25,57 +25,29 @@
                         <li><a href="#">Homepages </a></li>
                         <li><a href="#">/Products</a></li>
                     </ul>
+                    
                 </div>
-                <!-- <div class="bars">
-                    <div class="archive-layout">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                    <div class="arrange">
-                        <span>Sort by</span>
-                        <div class="select-arrange">
-                            <a href="#">
-                                <span>Sort by:</span>
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M0.55912 0.965447C0.751519 0.764964 1.05259 0.746739 1.26475 0.91077L1.32553 0.965447L6.00039 5.83647L10.6752 0.965447C10.8676 0.764964 11.1687 0.746739 11.3809 0.91077L11.4417 0.965447C11.6341 1.16593 11.6516 1.47965 11.4941 1.70073L11.4417 1.76406L6.3836 7.03465C6.1912 7.23513 5.89012 7.25336 5.67797 7.08933L5.61718 7.03465L0.55912 1.76406C0.347481 1.54353 0.347481 1.18598 0.55912 0.965447Z"
-                                        fill="#121212"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="product-grid">
                 </div>
             </div>
-            <label for="add-input" class="btnCart">
+            <div class="btnCart">
                 <i class="fa-solid fa-cart-shopping"></i>
-            </label>
-            <input type="checkbox" class="cart__input" id="add-input">
-            <label for="add-input" class="cart__overlay">
-
-            </label>
-            <label for="add-input" class="cart__open">
-            </label>
-            <label for="add-input" class="cart__open">
-                <div class="iconMultiply">
-                    <i for="add-input" class="fa-solid fa-xmark"></i>
-                </div>
-            </label>
-            <div class="cart cart__open">
-                <div class="title-cart">
-                    <h2>Shopping Cart</h2>
-                </div>
-                <div class="cart-colum">
-                </div>
-                <div class="cart-btn">
-                    <div class="subtotal">
-                        <span class="subtotal-text">Subtotal: </span>
-                        <span class="subtotal-price"></span>
+            </div>
+            <div class="cart__overlay">
+            </div>
+            <div class="show-cart">
+                <div class="cart">
+                    <div class="title-cart">
+                        <h2>Shopping Cart</h2>
+                        <i class="fa-solid fa-xmark close-icon"></i>
+                    </div>
+                    <div class="cart-colum">
+                    </div>
+                    <div class="cart-btn">
+                        <div class="subtotal">
+                            <span class="subtotal-text">Subtotal: </span>
+                            <span class="subtotal-price"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,12 +55,13 @@
     </div>
     <!-- <script type="module" src="./main.js"></script> -->
     <script src="./data/products.js"></script>
-    <script src="./UI-Controllers/common.Controller.js"></script>
     <script src="./UI-Controllers/product.Controllers.js"></script>
+    <script src="./UI-Controllers/common.Controller.js"></script>
     <script src="./UI-Controllers/cart.Controller.js"></script>
     <script src="./services/cart.service.js"></script>
     <script src="./utils/totalItemCart.js"></script>
     <script src="./utils/totalCart.js"></script>
+    <script src="./utils/localStorage.js"></script>
 
     <script src="../test.js"></script>
 </body>

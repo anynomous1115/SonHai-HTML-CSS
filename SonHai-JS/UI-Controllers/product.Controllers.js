@@ -1,8 +1,10 @@
 function showProduct(data) {
+    const productItem = document.querySelector(".product-grid");
     for (let item of data) {
         var currentProduct = item.originalPrice - (item.originalPrice / 100) * item.disCount;
         item.currentPrice = currentProduct
         var sizeString = "";
+
         function showSize(data) {
             var sizeAfter = [];
             for (let i = 0; i < data.length; i++) {
@@ -80,42 +82,7 @@ function showProduct(data) {
               `
     }
 
-    // const btn = document.getElementsByClassName("add-to-cart")
 }
 showProduct(products)
 
-const colors = document.querySelectorAll('.color');
-// Lặp qua từng phần tử và gắn sự kiện click
-colors.forEach(function (color) {
-    color.addEventListener('click', function () {
-        // Kiểm tra xem phần tử có lớp "open" hay không
-        if (this.classList.contains('active')) {
-            // Nếu có, xóa
-            this.classList.remove('active');
-        } else {
-            let parent = this.parentNode;
-            let child = parent.querySelectorAll('.color')
-            // Nếu không, thêm
-            child.forEach(function (c) {
-                c.classList.remove('active');
-            })
-            this.classList.add('active');
-        }
-    });
-})
 
-const sizes = document.querySelectorAll(".size-item");
-sizes.forEach(function (size) {
-    size.addEventListener('click', function () {
-        if (this.classList.contains('active-size')) {
-            this.classList.remove('active-size')
-        } else {
-            let parent = this.parentNode;
-            let child = parent.querySelectorAll('.size-item')
-            child.forEach(function (c) {
-                c.classList.remove('active-size')
-            })
-            this.classList.add('active-size')
-        }
-    })
-})
