@@ -1,41 +1,46 @@
-import { showCart } from "./cart.controller.v1.js";
-import { products } from "../data/products.js"
-import { getAllCartItem, addToCart } from "../services/cart.service.v1.js";
-import { totalCart } from "../utils/totalCart.js"
-import { totalItemCart } from "../utils/totalItemCart.js";
-function showProduct(data) {
+import { products } from "../ui-global-state/state.js"
+import { getAllCartItem, addToCart } from "../services/cart.service.js";
+import { showCart } from "../ui-controllers/cart.controller.js";
+function showSize(sizes) {
+    let sizeString = "";
+    let sizeAfter = [];
+    for (let i = 0; i < sizes.length; i++) {
+        let div = "<div class='size-item'>" + sizes[i] + "</div>";
+        sizeAfter.push(div);
+    }
+    for (let i = 0; i < sizeAfter.length; i++) {
+        sizeString += sizeAfter[i];
+    }
+    return sizeString
+}
+
+function showColor(colors) {
+    let colorString = "";
+    let colorAfter = [];
+    for (let i = 0; i < colors.length; i++) {
+        let div = '<div class="color"><div class="color-item" style="background-color:' + colors[i] + '"></div></div>';
+        colorAfter.push(div);
+    }
+    for (let i = 0; i < colorAfter.length; i++) {
+        colorString += colorAfter[i]
+    }
+    return colorString
+}
+const addToCartEvent = () => {
+    const btn_addToCart = document.querySelectorAll(".add-to-cart")
+    btn_addToCart.forEach(element => {
+        element.addEventListener("click", () => {
+            const id = element.getAttribute("data-id");
+            addToCart(id)
+            showCart()
+        })
+    })
+}
+function showProduct() {
     const productItem = document.querySelector(".product-grid");
-    for (let item of data) {
+    for (let item of products) {
         var currentProduct = item.originalPrice - (item.originalPrice / 100) * item.disCount;
         item.currentPrice = currentProduct
-        var sizeString = "";
-
-        function showSize(data) {
-            var sizeAfter = [];
-            for (let i = 0; i < data.length; i++) {
-                let div = "<div class='size-item'>" + item.size[i] + "</div>";
-                sizeAfter.push(div);
-            }
-            for (let i = 0; i < sizeAfter.length; i++) {
-                sizeString += sizeAfter[i];
-            }
-        }
-        showSize(item.size);
-
-        var colorString = "";
-        function showColor(data) {
-            var colorAfter = [];
-            for (let i = 0; i < data.length; i++) {
-                let div = '<div class="color"><div class="color-item" style="background-color:' + item.color[i] + '"></div></div>';
-                colorAfter.push(div);
-            }
-            for (let i = 0; i < colorAfter.length; i++) {
-                colorString += colorAfter[i]
-            }
-
-        }
-        showColor(item.color)
-
         productItem.innerHTML += `
                     <div class="product-grid-item">
                     <div class="wrap-img">
@@ -63,7 +68,7 @@ function showProduct(data) {
                             </button>
                         </div>
                         <div class="size">
-                        ${sizeString}
+                        ${showSize(item.size)}
                         </div>
                     </div>
                     <div class="img-desc">
@@ -79,24 +84,17 @@ function showProduct(data) {
                             </span>
                         </div>
                         <div class="color-product">
-                            ${colorString}
+                            ${showColor(item.color)}
                         </div>
                     </div>
                     </div>
               `
     }
+    addToCartEvent()
     getAllCartItem()
     showCart()
-    totalItemCart()
 }
-showProduct(products)
 
-
-const btn_addToCart = document.querySelectorAll(".add-to-cart")
-btn_addToCart.forEach(element => {
-    element.addEventListener("click", () => {
-        const id = element.getAttribute("data-id");
-        addToCart(id)
-        showCart()
-    })
-})
+export {
+    showProduct
+}

@@ -1,10 +1,13 @@
-// import { showProduct } from './UI-Controllers/product.Controllers.js'
-// import './data/products.js'
+import { openCartEvent,colorsEvent, sizesEvent } from "./ui-controllers/common.controller.js"
+import {  showProduct} from "./ui-controllers/product.controllers.js";
 
+window.addEventListener("load", (event) => {
+    function main() {
+        showProduct()
+        openCartEvent()
+        colorsEvent()
+        sizesEvent()
+    }
+    main()
+  });
 
-
-// function main() {
-//     console.log(products);
-//     // showProduct(products)
-// }
-// main()

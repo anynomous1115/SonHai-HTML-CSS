@@ -100,6 +100,8 @@ const products = [
         size: ['S', 'M', 'L']
     },
 ]
+let cartState = []
 export {
+    cartState,
     products
 }

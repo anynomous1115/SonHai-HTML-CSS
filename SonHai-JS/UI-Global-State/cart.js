@@ -1,2 +1,0 @@
-let cartState = []
-export { cartState }

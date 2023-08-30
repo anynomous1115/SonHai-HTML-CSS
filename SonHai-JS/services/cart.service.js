@@ -1,32 +1,26 @@
-import { showCart } from "../UI-Controllers/cart.controller.v1.js"
-import { cartState } from "../UI-Global-State/cart.js"
-import { totalItemCart} from "../utils/totalItemCart.js"
+import { cartState, products } from "../ui-global-state/state.js"
 import { saveLocalStorage } from "../utils/localStorage.js";
-
+const sync = () => {
+    saveLocalStorage("cart", cartState)
+}
 const getAllCartItem = () => {
     let cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
     cart.forEach(cartItem => {
-        cartItem.totalItemCartPrice = 0
         cartState.push(cartItem)
     })
-    return cart
 }
-const updateQuantityCartItem = (id, type) => {
+const updateQuantityCartItem = (id, num) => {
     const index = cartState.findIndex(i => i.id == id)
-    if (type == "+") {
-        cartState[index].quantity += 1
-    }
-    else {
-        cartState[index].quantity -= 1
-    }
-    saveLocalStorage("cart",cartState)
-    totalItemCart()
+        cartState[index].quantity += num
+    totalCartCalculator()
+    sync()
+
 }
 const deleteCartItem = (id) => {
     const index = cartState.findIndex(i => i.id == id)
     cartState.splice(index, 1)
-    totalItemCart()
-    saveLocalStorage("cart",cartState)
+    totalCartCalculator()
+    sync()
 }
 const addToCart = (id) => {
     const indexCartItem = cartState.findIndex(i => i.id === id)
@@ -36,15 +30,25 @@ const addToCart = (id) => {
         cartState.push({
             id,
             quantity: 1,
-            totalItemCartPrice: 0
         })
     }
-    totalItemCart()
-    saveLocalStorage("cart",cartState)
+    totalCartCalculator()
+    sync()
+}
+const totalCartCalculator = () => {
+    let totalCart = 0
+    cartState.map(item => {
+        const itemProduct = products.find(i => i.id == item.id)
+        let totalCartItem = item.quantity * itemProduct.currentPrice
+        totalCart += totalCartItem
+    
+    })
+    return totalCart.toFixed(2)
 }
 export {
     getAllCartItem,
     addToCart,
     updateQuantityCartItem,
-    deleteCartItem
+    deleteCartItem,
+    totalCartCalculator
 }

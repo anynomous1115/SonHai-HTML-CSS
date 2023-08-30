@@ -400,7 +400,10 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+.cart .quantity input{
+    text-align: center;
+    font-size: 1rem;
+}
 .cart .quantity .quantity-right {
     border-radius: 0 2px 2px 0;
 }
