@@ -100,3 +100,6 @@ const products = [
         size: ['S', 'M', 'L']
     },
 ]
+export {
+    products
+}

@@ -1,3 +1,8 @@
+import { showCart } from "./cart.controller.v1.js";
+import { products } from "../data/products.js"
+import { getAllCartItem, addToCart } from "../services/cart.service.v1.js";
+import { totalCart } from "../utils/totalCart.js"
+import { totalItemCart } from "../utils/totalItemCart.js";
 function showProduct(data) {
     const productItem = document.querySelector(".product-grid");
     for (let item of data) {
@@ -73,7 +78,6 @@ function showProduct(data) {
                             $${item.originalPrice}.00
                             </span>
                         </div>
-                        <!-- label and -->
                         <div class="color-product">
                             ${colorString}
                         </div>
@@ -81,8 +85,18 @@ function showProduct(data) {
                     </div>
               `
     }
-
+    getAllCartItem()
+    showCart()
+    totalItemCart()
 }
 showProduct(products)
 
 
+const btn_addToCart = document.querySelectorAll(".add-to-cart")
+btn_addToCart.forEach(element => {
+    element.addEventListener("click", () => {
+        const id = element.getAttribute("data-id");
+        addToCart(id)
+        showCart()
+    })
+})

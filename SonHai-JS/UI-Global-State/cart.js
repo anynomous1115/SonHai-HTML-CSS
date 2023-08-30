@@ -1,0 +1,2 @@
+let cartState = []
+export { cartState }

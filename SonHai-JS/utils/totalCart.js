@@ -1,9 +1,12 @@
-function totalCart(newListCart) {
+import { cartState } from "../UI-Global-State/cart.js"
+const totalCart = () => {
     let totalCart = 0
-    newListCart.map(function (item) {
-        totalCart += item.totalItem
+    cartState.map(item => {
+        totalCart += item.totalItemCartPrice
     })
-
     const subtotalPrice = document.querySelector(".subtotal-price")
     subtotalPrice.innerText = "$" + totalCart.toLocaleString();
+}
+export{
+    totalCart
 }
