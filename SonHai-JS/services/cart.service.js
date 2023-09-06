@@ -23,7 +23,6 @@ const updateQuantityCartItem = (id, num) => {
 const getValueCount = (inputCountValue, id) => {
     const index = cartState.findIndex(i => i.id == id)
     cartState[index].quantity = parseInt(inputCountValue)
-    console.log(cartState[index].quantity);
     sync()
 }
 
@@ -54,7 +53,6 @@ const totalCartCalculator = () => {
         const itemProduct = getProductById(item)
         let totalCartItem = item.quantity * itemProduct.currentPrice
         totalCart += totalCartItem
-        console.log(totalCart);
     })
     return totalCart.toFixed(2)
 }

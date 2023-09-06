@@ -60,7 +60,6 @@ const inputChangeEvent = () => {
 
 const showTotalCard = () => {
     const subtotalPrice = document.querySelector(".subtotal-price")
-    console.log(totalCartCalculator());
     subtotalPrice.innerText = "$" + totalCartCalculator()
 }
 
