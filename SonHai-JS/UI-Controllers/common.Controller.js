@@ -1,33 +1,32 @@
+import { showCart } from "../ui-controllers/cart.controller.js"
 
 const openCartEvent = () => {
-    const showCart = document.querySelector(".show-cart")
+    const showCartItem = document.querySelector(".show-cart")
     const cart = document.querySelector(".cart")
     const openCart = document.querySelector(".btnCart")
+    const overLay = document.querySelector(".cart__overlay")
+
     openCart.addEventListener('click', function () {
-        showCart.style.display = "block"
+        showCartItem.style.display = "block"
         cart.classList.add("cart__open")
         overLay.style.display = "block"
+        showCart()
     })
+}
+
+const closeCartEvent = () => {
+    const showCartItem = document.querySelector(".show-cart")
     const closeCart = document.querySelector(".close-icon")
     closeCart.addEventListener('click', function () {
-        showCart.style.display = "none"
+        showCartItem.style.display = "none"
         overLay.style.display = "none"
     })
     const overLay = document.querySelector(".cart__overlay")
     overLay.addEventListener('click', function () {
-        showCart.style.display = "none"
+        showCartItem.style.display = "none"
         overLay.style.display = "none"
 
     })
-    const btn_addToCart = document.querySelectorAll(".add-to-cart")
-    btn_addToCart.forEach(element =>{
-        element.addEventListener('click', function (){
-            showCart.style.display = "block"
-            cart.classList.add("cart__open")
-            overLay.style.display = "block"
-        })
-    })
-    
 }
 
 const colorsEvent = () => {
@@ -69,7 +68,8 @@ const sizesEvent = () => {
         })
     })
 }
-export{
+export {
+    closeCartEvent,
     openCartEvent,
     colorsEvent,
     sizesEvent
