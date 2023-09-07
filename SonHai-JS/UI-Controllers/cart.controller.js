@@ -10,7 +10,7 @@ const updateQuantityEvent = () => {
         element.addEventListener("click", () => {
             const id = element.getAttribute("data-id");
             updateQuantityCartItem(id, -1)
-            updateQuantityDOM()
+            updateQuantityDOM(id)
         })
     })
 
@@ -20,19 +20,16 @@ const updateQuantityEvent = () => {
         element.addEventListener("click", () => {
             const id = element.getAttribute("data-id");
             updateQuantityCartItem(id, 1)
-            updateQuantityDOM()
+            updateQuantityDOM(id)
         })
     })
 }
 
-const updateQuantityDOM = () => {
-    const countDOM = document.querySelectorAll(".count")
-    countDOM.forEach(element => {
-        const id = element.getAttribute("data-id");
-        const countValue = cartState.find(i => i.id === id)
-        element.getAttributeNode("value").value = countValue.quantity
-        showTotalCard()
-    })
+const updateQuantityDOM = (id) => {
+    const countDOM = document.querySelector(`.count[data-id="${id}"]`)
+    const countValue = cartState.find(i => i.id === id)
+    countDOM.value = countValue.quantity
+    showTotalCard()
 }
 
 const deleteCartEvent = () => {
@@ -41,9 +38,15 @@ const deleteCartEvent = () => {
         element.addEventListener("click", () => {
             const id = element.getAttribute("data-id");
             deleteCartItem(id)
-            showCart()
+            deleteCartDOM(id)
         })
     })
+}
+
+const deleteCartDOM = (id) => {
+    const cartItemDOM = document.querySelector(`.cart-item[data-id="${id}"]`)
+    cartItemDOM.remove(`.cart-item[data-id="${id}"]`)
+    showTotalCard()
 }
 
 const inputChangeEvent = () => {
@@ -90,8 +93,7 @@ const showCart = () => {
                         </div>
                     </div>
                     <div class="remove" data-id="${value.id}"><i class="fa-solid fa-xmark"></i></div>
-                </div>
-                <hr>`
+                </div>`
     })
 
     cartColum.innerHTML = result.join(" ")

@@ -48,13 +48,11 @@ const addToCart = (id) => {
 }
 
 const totalCartCalculator = () => {
-    let totalCart = 0
-    cartState.map(item => {
-        const itemProduct = getProductById(item)
-        let totalCartItem = item.quantity * itemProduct.currentPrice
-        totalCart += totalCartItem
-    })
-    return totalCart.toFixed(2)
+    return cartState.reduce((previousValue, cartItem) => {
+        const index = products.findIndex(product => product.id == cartItem.id)
+        previousValue += cartItem.quantity * products[index].currentPrice
+        return previousValue
+    }, 0)
 }
 
 export {

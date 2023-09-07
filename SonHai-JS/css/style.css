@@ -358,6 +358,8 @@ body {
 .cart .cart-colum .cart-item {
     width: 100%;
     display: flex;
+    border-bottom: var(--black-5) solid 1px;
+    margin-top: 1rem;
 }
 
 .cart .cart-item .cart-item-img {
