@@ -1,5 +1,4 @@
 import { cartState, products } from "../ui-global-state/state.js"
-import { getProductById } from "../utils/findById.js";
 import { saveLocalStorage } from "../utils/localStorage.js";
 
 const sync = () => {
@@ -15,21 +14,18 @@ const getAllCartItem = () => {
 
 const updateQuantityCartItem = (id, num) => {
     const index = cartState.findIndex(i => i.id == id)
-    cartState[index].quantity += num
-    totalCartCalculator()
-    sync()
-}
+    if (num == 1 || num == -1) {
+        cartState[index].quantity += parseInt(num)
 
-const getValueCount = (inputCountValue, id) => {
-    const index = cartState.findIndex(i => i.id == id)
-    cartState[index].quantity = parseInt(inputCountValue)
+    } else {
+        cartState[index].quantity = parseInt(num)
+    }
     sync()
 }
 
 const deleteCartItem = (id) => {
     const index = cartState.findIndex(i => i.id == id)
     cartState.splice(index, 1)
-    totalCartCalculator()
     sync()
 }
 
@@ -43,7 +39,6 @@ const addToCart = (id) => {
             quantity: 1,
         })
     }
-    totalCartCalculator()
     sync()
 }
 
@@ -61,5 +56,4 @@ export {
     updateQuantityCartItem,
     deleteCartItem,
     totalCartCalculator,
-    getValueCount
 }

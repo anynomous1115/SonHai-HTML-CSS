@@ -1,7 +1,25 @@
 import { cartState, products } from "../ui-global-state/state.js";
-import { updateQuantityCartItem, deleteCartItem, totalCartCalculator, getValueCount } from "../services/cart.service.js";
+import { updateQuantityCartItem, deleteCartItem, totalCartCalculator } from "../services/cart.service.js";
 import { getProductById } from "../utils/findById.js";
 
+// Tạo function openCart(true) | openCart(false)
+
+const openCart = (isOpen) => {
+    const showCartItem = document.querySelector(".show-cart")
+    const cart = document.querySelector(".cart")
+    const overLay = document.querySelector(".cart__overlay")
+
+    if (isOpen) {
+        showCartItem.style.display = "block"
+        cart.classList.add("cart__open")
+        overLay.style.display = "block"
+    } else {
+        cart.classList.remove("cart__open")
+        showCartItem.style.display = "none"
+        overLay.style.display = "none"
+    }
+    showCart()
+}
 
 const updateQuantityEvent = () => {
     const quantity_left = document.querySelectorAll(".quantity-left")
@@ -11,6 +29,7 @@ const updateQuantityEvent = () => {
             const id = element.getAttribute("data-id");
             updateQuantityCartItem(id, -1)
             updateQuantityDOM(id)
+            showTotalCard()
         })
     })
 
@@ -21,6 +40,7 @@ const updateQuantityEvent = () => {
             const id = element.getAttribute("data-id");
             updateQuantityCartItem(id, 1)
             updateQuantityDOM(id)
+            showTotalCard()
         })
     })
 }
@@ -29,7 +49,7 @@ const updateQuantityDOM = (id) => {
     const countDOM = document.querySelector(`.count[data-id="${id}"]`)
     const countValue = cartState.find(i => i.id === id)
     countDOM.value = countValue.quantity
-    showTotalCard()
+
 }
 
 const deleteCartEvent = () => {
@@ -39,6 +59,7 @@ const deleteCartEvent = () => {
             const id = element.getAttribute("data-id");
             deleteCartItem(id)
             deleteCartDOM(id)
+            showTotalCard()
         })
     })
 }
@@ -46,7 +67,6 @@ const deleteCartEvent = () => {
 const deleteCartDOM = (id) => {
     const cartItemDOM = document.querySelector(`.cart-item[data-id="${id}"]`)
     cartItemDOM.remove(`.cart-item[data-id="${id}"]`)
-    showTotalCard()
 }
 
 const inputChangeEvent = () => {
@@ -55,15 +75,15 @@ const inputChangeEvent = () => {
         element.addEventListener("change", (e) => {
             const id = element.getAttribute("data-id");
             const inputCountValue = e.target.value;
-            getValueCount(inputCountValue, id)
-            showCart()
+            updateQuantityCartItem(id, inputCountValue)
+            showTotalCard()
         })
     })
 }
 
 const showTotalCard = () => {
     const subtotalPrice = document.querySelector(".subtotal-price")
-    subtotalPrice.innerText = "$" + totalCartCalculator()
+    subtotalPrice.innerText = "$" + totalCartCalculator().toFixed(2)
 }
 
 const showCart = () => {
@@ -106,5 +126,6 @@ const showCart = () => {
 
 
 export {
-    showCart
+    showCart,
+    openCart
 }

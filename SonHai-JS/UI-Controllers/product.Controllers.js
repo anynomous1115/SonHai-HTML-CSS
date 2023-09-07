@@ -1,6 +1,7 @@
 import { products } from "../ui-global-state/state.js"
 import { addToCart } from "../services/cart.service.js";
-import { showCart } from "../ui-controllers/cart.controller.js";
+import { openCart, showCart } from "../ui-controllers/cart.controller.js";
+
 
 function showSize(sizes) {
     let sizeString = "";
@@ -30,15 +31,10 @@ function showColor(colors) {
 
 const addToCartEvent = () => {
     const btn_addToCart = document.querySelectorAll(".add-to-cart")
-    const showCartItem = document.querySelector(".show-cart")
-    const cart = document.querySelector(".cart")
-    const overLay = document.querySelector(".cart__overlay")
 
     btn_addToCart.forEach(element => {
         element.addEventListener("click", () => {
-            showCartItem.style.display = "block"
-            cart.classList.add("cart__open")
-            overLay.style.display = "block"
+            openCart(true)
             const id = element.getAttribute("data-id");
             addToCart(id)
             showCart()
