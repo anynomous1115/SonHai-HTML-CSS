@@ -9,6 +9,9 @@ const getAllCartItem = async () => {
                 cartState.push(element)
             })
         })
+        .catch((error) => {
+            console.log(error);
+        })
 }
 
 const updateQuantityCartItem = (id, num) => {
@@ -25,9 +28,11 @@ const updateQuantityCartItem = (id, num) => {
             })
 
         })
+            .catch((error) => {
+                console.log(error);
+            })
 
     } else {
-
         fetch(`${API_URL}/carts/${id}`, {
             method: "PUT",
             headers: {
@@ -38,6 +43,9 @@ const updateQuantityCartItem = (id, num) => {
                 quantity: cartState[index].quantity = parseInt(num)
             })
         })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 }
 
@@ -52,6 +60,9 @@ const deleteCartItem = (id) => {
         .then(
             cartState.splice(index, 1)
         )
+        .catch((error) => {
+            console.log(error);
+        })
 }
 
 const addToCart = (id) => {
@@ -67,8 +78,10 @@ const addToCart = (id) => {
                 id,
                 quantity: cartState[indexCartItem].quantity
             })
-
         })
+            .catch((error) => {
+                console.log(error);
+            })
     } else {
         // get /url/:id
         // post /url   body {username: "TTT"}
@@ -90,6 +103,9 @@ const addToCart = (id) => {
                     quantity: 1,
                 })
             )
+            .catch((error) => {
+                console.log(error);
+            })
     }
 }
 

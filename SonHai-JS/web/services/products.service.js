@@ -9,7 +9,7 @@ const getAllProducts = async () => {
             productsState.push(element)
         })
     } catch (error) {
-
+        console.log(error);
     }
 
 } 
