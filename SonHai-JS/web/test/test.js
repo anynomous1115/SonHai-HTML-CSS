@@ -13,15 +13,35 @@
 //     console.log(cart);
 // }
 // main()
-const promise = new Promise((resolve, reject) => {
-    resolve()
+// const promise = new Promise((resolve, reject) => {
+//     resolve()
+// })
+// promise.then((result) => {
+//     return result + 1
+// })
+//     .then((result) => {
+//         return result + 1
+//     })
+//     .then((result) => {
+//         console.log(result);
+//     })
+
+const arr = [
+    {
+        id: 11,
+        quantity: 3
+    },
+    {
+        id: 11,
+        quantity: 7
+    },
+    {
+        id: 11,
+        quantity: 10
+    },
+
+]
+const someArr = arr.every((element) => {
+    return element.quantity > 10
 })
-promise.then((result) => {
-    return result + 1
-})
-    .then((result) => {
-        return result + 1
-    })
-    .then((result) => {
-        console.log(result);
-    })
+console.log(someArr);

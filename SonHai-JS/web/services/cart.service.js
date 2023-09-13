@@ -112,7 +112,9 @@ const addToCart = (id) => {
 const totalCartCalculator = () => {
     return cartState.reduce((previousValue, cartItem) => {
         const index = productsState.findIndex(product => product.id == cartItem.id)
-        previousValue += cartItem.quantity * productsState[index].currentPrice
+        if (index > -1) {
+            previousValue += cartItem.quantity * productsState[index].currentPrice
+        }
         return previousValue
     }, 0)
 }

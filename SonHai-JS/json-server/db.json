@@ -147,16 +147,8 @@
   ],
   "carts": [
     {
-      "id": "1",
+      "id": "11",
       "quantity": 1
-    },
-    {
-      "id": "4",
-      "quantity": 1
-    },
-    {
-      "id": "2",
-      "quantity": 2
     }
   ]
 }
