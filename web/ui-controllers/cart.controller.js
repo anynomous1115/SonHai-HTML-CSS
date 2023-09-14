@@ -21,6 +21,24 @@ const openCart = (isOpen) => {
     }
 }
 
+const cartEvent = () => {
+    const btnOpenCart = document.querySelector(".btnCart")
+    const closeCart = document.querySelector(".close-icon")
+    const overLay = document.querySelector(".cart__overlay")
+
+    btnOpenCart.addEventListener('click', () => {
+        openCart(true)
+    })
+
+    closeCart.addEventListener('click', () => {
+        openCart(false)
+    })
+
+    overLay.addEventListener('click', () => {
+        openCart(false)
+    })
+}
+
 const updateQuantityEvent = () => {
     const quantity_left = document.querySelectorAll(".quantity-left")
 
@@ -89,7 +107,7 @@ const showTotalCard = () => {
 const showCart = () => {
     const cartColum = document.querySelector(".cart-colum")
     const mapCart = cartState.map(cartItem => {
-        const product = getProductById(cartItem)
+        const product = getProductById(cartItem.id)
         if (product) {
             return {
                 ...product,
@@ -97,8 +115,9 @@ const showCart = () => {
             }
         }
     })
+    const filterCart = mapCart.filter(i => i!==undefined)
 
-    const result = mapCart.map(value => {
+    const result = filterCart.map(value => {
         return ` <div class="cart-item" data-id="${value.id}">
                     <div class="cart-item-img">
                         <img src="${value.image}" alt="">
@@ -127,5 +146,6 @@ const showCart = () => {
 
 export {
     showCart,
-    openCart
+    openCart,
+    cartEvent
 }
